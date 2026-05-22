@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BoloUp Agency Policy</title>
+  <title>BoloUp Policy Center</title>
   <style>
     :root {
       color-scheme: light;
@@ -102,11 +102,30 @@
       margin-top: 24px;
     }
 
+    .nav-group {
+      display: grid;
+      gap: 5px;
+      margin-top: 12px;
+    }
+
+    .nav-group:first-child {
+      margin-top: 0;
+    }
+
+    .nav-heading {
+      margin: 10px 0 2px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
     nav a {
       display: flex;
       align-items: center;
       min-height: 40px;
-      padding: 9px 11px;
+      padding: 9px 11px 9px 18px;
       border-radius: 8px;
       color: #cdd8ea;
       font-size: 14px;
@@ -543,8 +562,8 @@
       <div class="brand">
         <div class="brand-mark">B</div>
         <div>
-          <strong data-i18n="brandTitle">BoloUp Agency</strong>
-          <span data-i18n="brandSubtitle">Guild Policy Center</span>
+          <strong data-i18n="brandTitle">BoloUp Policy</strong>
+          <span data-i18n="brandSubtitle">Guild & Host Center</span>
         </div>
       </div>
       <div class="language-switcher">
@@ -556,13 +575,24 @@
         </select>
       </div>
       <nav>
-        <a href="#overview" data-i18n="navOverview">Overview</a>
-        <a href="#agency-commission" data-i18n="navAgency">Agency Commission</a>
-        <a href="#income-example" data-i18n="navExample">Income Example</a>
-        <a href="#basic-commission" data-i18n="navBasic">Basic Commission</a>
-        <a href="#sub-agency" data-i18n="navSub">Sub Agency</a>
-        <a href="#extra-rewards" data-i18n="navRewards">Extra Rewards</a>
-        <a href="#coin-seller" data-i18n="navSeller">Coin Seller</a>
+        <div class="nav-group">
+          <div class="nav-heading">Agency</div>
+          <a href="#agency-commission" data-i18n="navAgency">Agency Commission</a>
+          <a href="#income-example" data-i18n="navExample">Income Example</a>
+          <a href="#basic-commission" data-i18n="navBasic">Basic Commission</a>
+          <a href="#sub-agency" data-i18n="navSub">Sub Agency</a>
+          <a href="#extra-rewards" data-i18n="navRewards">Extra Rewards</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-heading">Host</div>
+          <a href="#host-policy">Host Policy Overview</a>
+          <a href="#talent-host-policy">Talent Host</a>
+          <a href="#star-host-policy">Star Host</a>
+        </div>
+        <div class="nav-group">
+          <div class="nav-heading">Coin Seller</div>
+          <a href="#coin-seller" data-i18n="navSeller">Coin Seller Policy</a>
+        </div>
       </nav>
       <div class="side-note" data-i18n="sideNote">
         Commission level is calculated from host gift diamonds earned in the past 30 days, excluding today.
@@ -572,9 +602,9 @@
     <main>
       <header class="hero" id="overview">
         <div class="hero-content">
-          <span class="eyebrow" data-i18n="heroEyebrow">Official Agency Policy</span>
-          <h1 data-i18n="heroTitle">BoloUp Guild Growth & Commission Policy</h1>
-          <p data-i18n="heroText">Earn agency commission, gift sharing commission, activity rewards, room profit sharing, and coin seller benefits through a clear level-based system.</p>
+          <span class="eyebrow" data-i18n="heroEyebrow">Official Policy Center</span>
+          <h1 data-i18n="heroTitle">BoloUp Guild & Host Policy Center</h1>
+          <p data-i18n="heroText">A unified website for guild commissions, agency rewards, coin seller rules, basic host benefits, Talent Host promotion, and Star Host salary policies.</p>
         </div>
       </header>
 
@@ -927,17 +957,212 @@
         </div>
       </section>
 
+      <section id="host-policy">
+        <div class="section-head">
+          <div>
+            <h2>Host Policy Overview</h2>
+            <p>The host policy covers basic host earnings, new host tasks, the Talent Host path, and Star Host weekly salary rules in one operating view.</p>
+          </div>
+          <span class="badge">Host Policy</span>
+        </div>
+
+        <div class="summary-grid" aria-label="Host policy highlights">
+          <article class="metric">
+            <span>Gift Share</span>
+            <strong>65%</strong>
+            <p>Normal gifts can reach 65% gift share; Lucky Gifts provide 2%-4% gift share.</p>
+          </article>
+          <article class="metric">
+            <span>New Host Week 1</span>
+            <strong>$3.5</strong>
+            <p>New hosts can receive fixed or free-target salary during the first week.</p>
+          </article>
+          <article class="metric">
+            <span>Withdrawal</span>
+            <strong>Daily</strong>
+            <p>Daily withdrawal and self-withdrawal are available.</p>
+          </article>
+          <article class="metric">
+            <span>Ranking Reward</span>
+            <strong>$225</strong>
+            <p>Hosts can participate in ranking rewards.</p>
+          </article>
+        </div>
+
+        <div class="two-col" style="margin-top: 18px;">
+          <div class="policy-card">
+            <h3>Basic Host Earnings</h3>
+            <ul>
+              <li>Income can include gift share, hourly salary, ranking rewards, and task rewards.</li>
+              <li>Host salary level is decided by earnings within the last 7 days.</li>
+              <li>The conversion standard is 10,000 diamonds = $1.</li>
+              <li>Male hosts must have Charm Level >= 8.</li>
+              <li>Higher income can increase the basic salary level.</li>
+            </ul>
+          </div>
+          <div class="notice">
+            <p>The source Host Policy document exports the New Host Task and Normal Hosts Salary tables as images. This page summarizes the readable policy text; detailed levels should be checked against the original table when finalizing operations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="talent-host-policy">
+        <div class="section-head">
+          <div>
+            <h2>Talent Host Policy</h2>
+            <p>The Talent Host Program gives qualified hosts more exposure, profile benefits, traffic support, and a path to Star Host or S-idol status.</p>
+          </div>
+          <span class="badge">Talented Host</span>
+        </div>
+
+        <div class="two-col">
+          <div class="policy-card">
+            <h3>Benefits</h3>
+            <ul>
+              <li>Weekly salary up to $20.</li>
+              <li>Exclusive tag on the profile page.</li>
+              <li>Exclusive live room badge with traffic boost.</li>
+              <li>Chance to become a Star Host and earn weekly salary up to $60.</li>
+            </ul>
+          </div>
+          <div class="policy-card">
+            <h3>Application Requirements</h3>
+            <ul>
+              <li>Hosts must have completed at least 30 minutes of independent live streaming.</li>
+              <li>Hosts must have received more than 100 diamonds during live stream.</li>
+              <li>Applications can be submitted only when program slots are available.</li>
+              <li>The application video must be at least 30 seconds and clearly demonstrate talent.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="activities" style="margin-top: 18px;">
+          <article class="activity">
+            <div class="icon">1</div>
+            <h3>Video Review</h3>
+            <p>No special effects or heavy filters. Video quality must be clear, stable, properly framed, and aligned with the selected talent category.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">2</div>
+            <h3>Salary Rules</h3>
+            <p>After approval, the host salary upgrades to Talent Host salary from the following Monday at 00:00 UTC+8. Up to 3 live hours per day count toward salary tasks.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">3</div>
+            <h3>Retention & Elimination</h3>
+            <p>Hosts must meet weekly Lucky Gift earnings or gifting-user thresholds. If not, Talent Host status is removed next week and salary returns to the basic Live salary plan.</p>
+          </article>
+        </div>
+
+        <div class="notice" style="margin-top: 18px;">
+          <p>From this policy onward, Star Hosts and S-idol hosts must be promoted from Talent Hosts. Direct Star Host applications are no longer accepted. Leave requests must be reported to the assigned admin before Monday 00:00 UTC+8.</p>
+        </div>
+      </section>
+
+      <section id="star-host-policy">
+        <div class="section-head">
+          <div>
+            <h2>Star Host Policy</h2>
+            <p>Star Host is the higher-level host policy after Talent Host. Once a host becomes a Star Host, the original hourly tasks are removed and weekly salary tasks apply.</p>
+          </div>
+          <span class="badge">Star Host</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th>Reward</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Weekly live time 8 hours</td>
+                <td>$5</td>
+              </tr>
+              <tr>
+                <td>Weekly live time 10 hours</td>
+                <td>$10</td>
+              </tr>
+              <tr>
+                <td>Weekly live time 20 hours</td>
+                <td>$10</td>
+              </tr>
+              <tr>
+                <td>Lucky Gift income 20k diamonds</td>
+                <td>$5</td>
+              </tr>
+              <tr>
+                <td>Lucky Gift income 30k diamonds</td>
+                <td>$5</td>
+              </tr>
+              <tr>
+                <td>Weekly live time 24 hours</td>
+                <td>$5</td>
+              </tr>
+              <tr>
+                <td>Lucky Gift income 50k diamonds</td>
+                <td>$5</td>
+              </tr>
+              <tr>
+                <td>Lucky Gift income 200k diamonds</td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>Lucky Gift income 400k diamonds</td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>Lucky Gift income 650k diamonds</td>
+                <td>$20</td>
+              </tr>
+              <tr>
+                <td>Luxurious Gift income 1M diamonds</td>
+                <td>$15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="two-col" style="margin-top: 18px;">
+          <div class="policy-card">
+            <h3>Core Rules</h3>
+            <ul>
+              <li>Maximum counted live time is 4 hours per day.</li>
+              <li>Salary is paid weekly, with maximum weekly salary of $110.</li>
+              <li>Tasks refresh at 00:00:00 UTC+8 on the first day of each week, and live duration is counted from that time.</li>
+              <li>Each completed task can be claimed for the corresponding reward.</li>
+            </ul>
+          </div>
+          <div class="policy-card">
+            <h3>Application & Live Requirements</h3>
+            <ul>
+              <li>Participated in at least one livehouse event or completed a 20-minute solo live audition.</li>
+              <li>Send a talent video of at least 15 seconds. Singing, dancing, and other talents are accepted.</li>
+              <li>Contact the agency admin or official email: star.host@iboloupapp.com.</li>
+              <li>Use a qualified live cover, avatar, and nickname; keep clean appearance, proper camera distance, lighting, background music, and active interaction.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="formula" style="margin-top: 18px;">
+          <strong>Cancellation Rules:</strong>
+          <p>Fraud or regulation violations will immediately terminate the fixed salary policy and trigger penalties. Star Hosts with negative performance will be warned; three warnings within one month will cancel Star Host status.</p>
+        </div>
+      </section>
+
       <p class="footer" data-i18n="footer">Prepared as an HTML policy interface based on the source Google Doc content. Please confirm final legal and operational wording before publishing.</p>
     </main>
   </div>
   <script>
     const translations = {
       en: {
-        pageTitle: "BoloUp Agency Policy",
+        pageTitle: "BoloUp Policy Center",
         asideLabel: "Policy navigation",
         languageAria: "Select language",
-        brandTitle: "BoloUp Agency",
-        brandSubtitle: "Guild Policy Center",
+        brandTitle: "BoloUp Policy",
+        brandSubtitle: "Guild & Host Center",
         languageLabel: "Language",
         navOverview: "Overview",
         navAgency: "Agency Commission",
@@ -947,9 +1172,9 @@
         navRewards: "Extra Rewards",
         navSeller: "Coin Seller",
         sideNote: "Commission level is calculated from host gift diamonds earned in the past 30 days, excluding today.",
-        heroEyebrow: "Official Agency Policy",
-        heroTitle: "BoloUp Guild Growth & Commission Policy",
-        heroText: "Earn agency commission, gift sharing commission, activity rewards, room profit sharing, and coin seller benefits through a clear level-based system.",
+        heroEyebrow: "Official Policy Center",
+        heroTitle: "BoloUp Guild & Host Policy Center",
+        heroText: "A unified website for guild commissions, agency rewards, coin seller rules, basic host benefits, Talent Host promotion, and Star Host salary policies.",
         summaryLabel: "Policy highlights",
         metric1Label: "Max Agency Rate",
         metric1Text: "Based on valid host earnings over the past 30 days.",
@@ -1034,11 +1259,11 @@
         footer: "Prepared as an HTML policy interface based on the source Google Doc content. Please confirm final legal and operational wording before publishing."
       },
       id: {
-        pageTitle: "Kebijakan Agensi BoloUp",
+        pageTitle: "Pusat Kebijakan BoloUp",
         asideLabel: "Navigasi kebijakan",
         languageAria: "Pilih bahasa",
-        brandTitle: "Agensi BoloUp",
-        brandSubtitle: "Pusat Kebijakan Guild",
+        brandTitle: "Kebijakan BoloUp",
+        brandSubtitle: "Pusat Guild & Host",
         languageLabel: "Bahasa",
         navOverview: "Ringkasan",
         navAgency: "Komisi Agensi",
@@ -1048,9 +1273,9 @@
         navRewards: "Reward Tambahan",
         navSeller: "Penjual Koin",
         sideNote: "Level komisi dihitung dari diamond hadiah host selama 30 hari terakhir, tidak termasuk hari ini.",
-        heroEyebrow: "Kebijakan Resmi Agensi",
-        heroTitle: "Kebijakan Pertumbuhan Guild & Komisi BoloUp",
-        heroText: "Dapatkan komisi agensi, komisi bagi hasil hadiah, reward aktivitas, bagi hasil room, dan manfaat penjual koin melalui sistem level yang jelas.",
+        heroEyebrow: "Pusat Kebijakan Resmi",
+        heroTitle: "Pusat Kebijakan Guild & Host BoloUp",
+        heroText: "Satu website untuk komisi guild, reward agensi, aturan penjual koin, benefit host dasar, promosi Talent Host, dan kebijakan salary Star Host.",
         summaryLabel: "Sorotan kebijakan",
         metric1Label: "Rate Agensi Maks",
         metric1Text: "Berdasarkan pendapatan valid host selama 30 hari terakhir.",
@@ -1135,11 +1360,11 @@
         footer: "Disiapkan sebagai antarmuka kebijakan HTML berdasarkan konten Google Doc sumber. Harap konfirmasi wording legal dan operasional final sebelum dipublikasikan."
       },
       ar: {
-        pageTitle: "سياسة وكالة BoloUp",
+        pageTitle: "مركز سياسات BoloUp",
         asideLabel: "تنقل السياسة",
         languageAria: "اختر اللغة",
-        brandTitle: "وكالة BoloUp",
-        brandSubtitle: "مركز سياسات النقابات",
+        brandTitle: "سياسات BoloUp",
+        brandSubtitle: "مركز النقابات والمضيفين",
         languageLabel: "اللغة",
         navOverview: "نظرة عامة",
         navAgency: "عمولة الوكالة",
@@ -1149,9 +1374,9 @@
         navRewards: "مكافآت إضافية",
         navSeller: "بائع العملات",
         sideNote: "يتم احتساب مستوى العمولة بناء على ألماس الهدايا الذي حققه المضيفون خلال آخر 30 يوما، باستثناء اليوم.",
-        heroEyebrow: "سياسة الوكالة الرسمية",
-        heroTitle: "سياسة نمو النقابات والعمولات في BoloUp",
-        heroText: "احصل على عمولة الوكالة، وعمولة مشاركة الهدايا، ومكافآت الأنشطة، ومشاركة أرباح الغرف، ومزايا بائع العملات من خلال نظام مستويات واضح.",
+        heroEyebrow: "مركز السياسات الرسمي",
+        heroTitle: "مركز سياسات النقابات والمضيفين في BoloUp",
+        heroText: "موقع موحد لعمولات النقابات، ومكافآت الوكالات، وقواعد بائع العملات، ومزايا المضيف الأساسية، وترقية Talent Host، وسياسات راتب Star Host.",
         summaryLabel: "أبرز نقاط السياسة",
         metric1Label: "أعلى معدل وكالة",
         metric1Text: "يعتمد على الأرباح الصالحة للمضيفين خلال آخر 30 يوما.",
