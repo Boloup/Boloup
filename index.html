@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BoloUp Agency Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #647089;
+      --line: #dbe2ef;
+      --surface: #ffffff;
+      --soft: #f5f7fb;
+      --brand: #1456d9;
+      --brand-deep: #0c3588;
+      --mint: #0d8f75;
+      --amber: #d9890b;
+      --rose: #c2486b;
+      --shadow: 0 18px 48px rgba(20, 44, 82, .12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(20, 86, 217, .08), rgba(255, 255, 255, 0) 420px),
+        var(--soft);
+      line-height: 1.55;
+    }
+
+    body[dir="rtl"] {
+      font-family: Tahoma, Arial, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .layout {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      min-width: 0;
+      padding: 28px 22px;
+      background: #10203d;
+      color: #eef4ff;
+      overflow-y: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3a8bff, #21c6a8);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 2px;
+      color: #b9c7dc;
+      font-size: 12px;
+    }
+
+    nav {
+      display: grid;
+      gap: 7px;
+      margin-top: 24px;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 9px 11px;
+      border-radius: 8px;
+      color: #cdd8ea;
+      font-size: 14px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #ffffff;
+      background: rgba(255, 255, 255, .11);
+      outline: none;
+    }
+
+    .language-switcher {
+      margin-top: 20px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .language-switcher label {
+      display: block;
+      margin-bottom: 8px;
+      color: #b9c7dc;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .language-switcher select {
+      width: 100%;
+      min-height: 40px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: #ffffff;
+      background: #182b4d;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .language-switcher select:focus {
+      outline: 2px solid rgba(79, 166, 255, .7);
+      outline-offset: 2px;
+    }
+
+    .side-note {
+      margin-top: 28px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+      color: #cdd8ea;
+      font-size: 13px;
+    }
+
+    main {
+      min-width: 0;
+      padding: 34px clamp(18px, 4vw, 54px) 64px;
+    }
+
+    .hero {
+      min-height: 360px;
+      display: grid;
+      align-items: end;
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(90deg, rgba(12, 28, 58, .92), rgba(12, 28, 58, .56), rgba(12, 28, 58, .2)),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80") center / cover;
+      color: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 999px;
+      color: #dce9ff;
+      background: rgba(255, 255, 255, .12);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      max-width: 760px;
+      font-size: clamp(34px, 5vw, 64px);
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 18px 0 0;
+      color: #d8e5f7;
+      font-size: clamp(16px, 2vw, 19px);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .metric,
+    .policy-card,
+    .table-wrap,
+    .formula,
+    .activity,
+    .notice {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgba(20, 44, 82, .06);
+    }
+
+    .metric {
+      min-height: 124px;
+      padding: 18px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 8px;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1;
+    }
+
+    .metric p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      margin-top: 42px;
+      scroll-margin-top: 24px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(26px, 3vw, 38px);
+    }
+
+    .section-head p {
+      max-width: 640px;
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #e7f1ff;
+      color: var(--brand-deep);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      background: var(--surface);
+    }
+
+    th,
+    td {
+      padding: 15px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    body[dir="rtl"] th,
+    body[dir="rtl"] td {
+      text-align: right;
+    }
+
+    th {
+      color: #39445a;
+      background: #edf3fb;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td:first-child {
+      font-weight: 900;
+      color: var(--brand-deep);
+    }
+
+    .level-s {
+      color: var(--rose);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .policy-card {
+      padding: 22px;
+    }
+
+    .policy-card h3 {
+      font-size: 20px;
+    }
+
+    .policy-card p,
+    .policy-card li {
+      color: var(--muted);
+    }
+
+    .policy-card ul {
+      margin: 14px 0 0;
+      padding-left: 20px;
+    }
+
+    .formula {
+      padding: 18px;
+      background: #fffaf0;
+      border-color: #efd69e;
+    }
+
+    .formula strong {
+      color: #8a5700;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .calc {
+      min-height: 104px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    .calc small {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .calc strong {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 22px;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .activity {
+      min-height: 190px;
+      padding: 20px;
+    }
+
+    .activity .icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      background: #ecf7f3;
+      color: var(--mint);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .activity h3 {
+      font-size: 18px;
+    }
+
+    .activity p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .notice {
+      padding: 18px 20px;
+      border-left: 5px solid var(--brand);
+    }
+
+    body[dir="rtl"] .notice {
+      border-right: 5px solid var(--brand);
+      border-left: 1px solid var(--line);
+    }
+
+    .notice p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .comparison td:nth-child(2),
+    .comparison td:nth-child(3),
+    .comparison td:nth-child(4),
+    .comparison td:nth-child(5),
+    .comparison td:nth-child(6),
+    .comparison td:nth-child(7) {
+      white-space: nowrap;
+    }
+
+    .footer {
+      margin-top: 46px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1060px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+        height: auto;
+        padding: 18px;
+      }
+
+      nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .side-note {
+        display: none;
+      }
+
+      .summary-grid,
+      .activities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      main {
+        padding: 18px 14px 42px;
+      }
+
+      .hero {
+        min-height: 420px;
+        padding: 26px;
+        background:
+          linear-gradient(180deg, rgba(12, 28, 58, .55), rgba(12, 28, 58, .96)),
+          url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1100&q=80") center / cover;
+      }
+
+      nav {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .badge {
+        margin-top: 12px;
+      }
+
+      .summary-grid,
+      .activities,
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        min-width: 660px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside aria-label="Policy navigation" data-i18n-attr="aria-label:asideLabel">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div>
+          <strong data-i18n="brandTitle">BoloUp Agency</strong>
+          <span data-i18n="brandSubtitle">Guild Policy Center</span>
+        </div>
+      </div>
+      <div class="language-switcher">
+        <label for="languageSelect" data-i18n="languageLabel">Language</label>
+        <select id="languageSelect" aria-label="Select language" data-i18n-attr="aria-label:languageAria">
+          <option value="en">English</option>
+          <option value="id">Bahasa Indonesia</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+      <nav>
+        <a href="#overview" data-i18n="navOverview">Overview</a>
+        <a href="#agency-commission" data-i18n="navAgency">Agency Commission</a>
+        <a href="#income-example" data-i18n="navExample">Income Example</a>
+        <a href="#basic-commission" data-i18n="navBasic">Basic Commission</a>
+        <a href="#sub-agency" data-i18n="navSub">Sub Agency</a>
+        <a href="#extra-rewards" data-i18n="navRewards">Extra Rewards</a>
+        <a href="#coin-seller" data-i18n="navSeller">Coin Seller</a>
+      </nav>
+      <div class="side-note" data-i18n="sideNote">
+        Commission level is calculated from host gift diamonds earned in the past 30 days, excluding today.
+      </div>
+    </aside>
+
+    <main>
+      <header class="hero" id="overview">
+        <div class="hero-content">
+          <span class="eyebrow" data-i18n="heroEyebrow">Official Agency Policy</span>
+          <h1 data-i18n="heroTitle">BoloUp Guild Growth & Commission Policy</h1>
+          <p data-i18n="heroText">Earn agency commission, gift sharing commission, activity rewards, room profit sharing, and coin seller benefits through a clear level-based system.</p>
+        </div>
+      </header>
+
+      <div class="summary-grid" aria-label="Policy highlights" data-i18n-attr="aria-label:summaryLabel">
+        <article class="metric">
+          <span data-i18n="metric1Label">Max Agency Rate</span>
+          <strong>20%</strong>
+          <p data-i18n="metric1Text">Based on valid host earnings over the past 30 days.</p>
+        </article>
+        <article class="metric">
+          <span data-i18n="metric2Label">Gift Share Bonus</span>
+          <strong>15%</strong>
+          <p data-i18n="metric2Text">Extra sharing commission for normal gifts.</p>
+        </article>
+        <article class="metric">
+          <span data-i18n="metric3Label">Max Agent Income</span>
+          <strong>28%</strong>
+          <p data-i18n="metric3Text">Total earning rate can be higher than many comparable apps.</p>
+        </article>
+        <article class="metric">
+          <span data-i18n="metric4Label">Weekly Rewards</span>
+          <strong>$9,000+</strong>
+          <p data-i18n="metric4Text">Official weekly rewards continue to grow as agencies join.</p>
+        </article>
+      </div>
+
+      <section id="agency-commission">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="agencyTitle">Agency Commission</h2>
+            <p data-i18n="agencyText">BoloUp offers agency commission of up to 20%, plus an extra 15% gift sharing commission for agents.</p>
+          </div>
+          <span class="badge" data-i18n="agencyBadge">Up to 20% + 15%</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="thLevel">Level</th>
+                <th data-i18n="thDiamonds">Earning in Past 30 Days - Diamonds</th>
+                <th data-i18n="thUsd">Earning in Past 30 Days - USD</th>
+                <th data-i18n="thRate">Commission Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>D</td>
+                <td>0 - 1,999,999</td>
+                <td>$0 - $199</td>
+                <td>4%</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>2,000,000 - 9,999,999</td>
+                <td>$200 - $999</td>
+                <td>8%</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td>10,000,000 - 49,999,999</td>
+                <td>$1,000 - $4,999</td>
+                <td>12%</td>
+              </tr>
+              <tr>
+                <td>A</td>
+                <td>50,000,000 - 149,999,999</td>
+                <td>$5,000 - $14,999</td>
+                <td>16%</td>
+              </tr>
+              <tr>
+                <td class="level-s">S</td>
+                <td>150,000,000+</td>
+                <td>$15,000+</td>
+                <td>20%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="income-example">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="exampleTitle">Income Example</h2>
+            <p data-i18n="exampleText">When today&apos;s agency commission is 20%, a host gift worth 100k coins creates three separate income components.</p>
+          </div>
+          <span class="badge" data-i18n="exampleBadge">100k coins = $10</span>
+        </div>
+
+        <div class="two-col">
+          <div class="policy-card">
+            <h3 data-i18n="calcTitle">Example Calculation</h3>
+            <ul>
+              <li data-i18n="calcLi1">Host receives 65% of diamonds: 65k diamonds, worth $6.50.</li>
+              <li data-i18n="calcLi2">Agent receives 15% gift sharing: 15k diamonds, worth $1.50.</li>
+              <li data-i18n="calcLi3">Agency commission is calculated as 100k x 65% x 20% = 13k diamonds, worth $1.30.</li>
+              <li data-i18n="calcLi4">Total agent income is $1.50 + $1.30 = $2.80.</li>
+            </ul>
+            <div class="calc-grid">
+              <div class="calc">
+                <small data-i18n="calcHost">Host Income</small>
+                <strong>$6.50</strong>
+              </div>
+              <div class="calc">
+                <small data-i18n="calcGift">Gift Share</small>
+                <strong>$1.50</strong>
+              </div>
+              <div class="calc">
+                <small data-i18n="calcAgency">Agency Commission</small>
+                <strong>$1.30</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="formula">
+            <strong data-i18n="partyTitle">Normal Gift Share in Party Room</strong>
+            <p data-i18n="partyText1">Party room agents receive an extra 15% normal gift sharing commission. Because the normal gift share rate is 65%, the chat room agency&apos;s normal gift share can reach 80%.</p>
+            <p data-i18n="partyText2">For a $10 host gift, the host receives $6.50 and the agent shares $1.50 in diamonds. If $10 is sent directly to the agent, the agent receives $8.00 in diamonds.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 18px;">
+          <table class="comparison">
+            <thead>
+              <tr>
+                <th data-i18n="thApp">App</th>
+                <th data-i18n="thGiftValue">Gift Value</th>
+                <th data-i18n="thHostIncome">Host Income</th>
+                <th data-i18n="thAgentGift">Agent Gift Income</th>
+                <th data-i18n="thAgentCommission">Agent Commission</th>
+                <th data-i18n="thTotalAgent">Total Agent Income</th>
+                <th data-i18n="thTotalShare">Total Gift Share</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BoloUp</td>
+                <td>100k coins ($10)</td>
+                <td>$6.50</td>
+                <td>$1.50</td>
+                <td>$1.30</td>
+                <td>$2.80</td>
+                <td>$9.30</td>
+              </tr>
+              <tr>
+                <td>Poppo Live</td>
+                <td>100k coins ($10)</td>
+                <td>$7.00</td>
+                <td>$0.00</td>
+                <td>$1.40</td>
+                <td>$1.40</td>
+                <td>$8.40</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="basic-commission">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="basicTitle">Basic Commission From Hosts</h2>
+            <p data-i18n="basicText">Basic commission is calculated from host basic income and the agency commission rate.</p>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="policy-card">
+            <h3 data-i18n="formulaTitle">Core Formulas</h3>
+            <ul>
+              <li data-i18n="formulaLi1">Basic Commission = Host Basic Income x Commission Rate</li>
+              <li data-i18n="formulaLi2">Host Basic Income = Host Gift Income + Host Call Income</li>
+              <li data-i18n="formulaLi3">Today&apos;s commission rate is determined by host earnings from the past 30 days.</li>
+            </ul>
+          </div>
+          <div class="notice">
+            <p data-i18n="validIncome">Valid income includes all host basic income and all agency self income. Host basic income counts hosts who belong to you and hosts under all invited agents in your agency link.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sub-agency">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="subTitle">Commission From Invited Agencies</h2>
+            <p data-i18n="subText">Sub-agency commission is calculated from the difference between your commission rate and the sub-agency&apos;s commission rate.</p>
+          </div>
+        </div>
+
+        <div class="formula">
+          <strong data-i18n="subFormula">Sub Agency Commission = Sub Agency Host Basic Income x (Your Commission Rate - Sub Agency Commission Rate)</strong>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 18px;">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="thAgency">Agency</th>
+                <th data-i18n="thValidIncome">Valid Income</th>
+                <th data-i18n="thRate">Commission Rate</th>
+                <th data-i18n="thCommissionExample">Commission Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>50M + 30M + 60M = 140M</td>
+                <td>16%</td>
+                <td data-i18n="subRowA">Self commission: 50M x 16% = 8M</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td>30M + 5M = 35M</td>
+                <td>12%</td>
+                <td data-i18n="subRowB">Sub-agency commission to A: 30M x (16% - 12%) = 1.2M</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>60M</td>
+                <td>16%</td>
+                <td data-i18n="subRowC">Sub-agency commission depends on rate difference.</td>
+              </tr>
+              <tr>
+                <td data-i18n="totalA">Total A</td>
+                <td>--</td>
+                <td>--</td>
+                <td>8M + 1.2M = 9.2M</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="extra-rewards">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="rewardsTitle">Agent Extra Rewards</h2>
+            <p data-i18n="rewardsText">Agents can earn additional rewards through level upgrades, user invitations, room campaigns, game rebates, weekly stars, and host invitations.</p>
+          </div>
+          <span class="badge" data-i18n="rewardsBadge">Activity Rewards</span>
+        </div>
+
+        <div class="activities">
+          <article class="activity">
+            <div class="icon">1</div>
+            <h3 data-i18n="activity1Title">Agency Level Activity</h3>
+            <p data-i18n="activity1Text">Earn up to $270 in upgrade rewards and up to $1,000 in weekly leaderboard rewards.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">2</div>
+            <h3 data-i18n="activity2Title">Invite New Users</h3>
+            <p data-i18n="activity2Text">Earn points when invited users recharge and bet on games. Weekly bonus can reach $5,500.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">3</div>
+            <h3 data-i18n="activity3Title">Room Profit Sharing</h3>
+            <p data-i18n="activity3Text">Higher game betting volume in your room can unlock rewards up to 0.75%, with no upper limit.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">4</div>
+            <h3 data-i18n="activity4Title">Game Loss Rebate</h3>
+            <p data-i18n="activity4Text">BoloUp can cover part of game losses, returning up to $3,000 per week.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">5</div>
+            <h3 data-i18n="activity5Title">Weekly Star</h3>
+            <p data-i18n="activity5Text">Light up the Weekly Star Gift for weekly rewards up to 4,900,000 diamonds, valued at $490.</p>
+          </article>
+          <article class="activity">
+            <div class="icon">6</div>
+            <h3 data-i18n="activity6Title">Host Invite Reward</h3>
+            <p data-i18n="activity6Text">Invite each host for a chance to spin and win up to $16.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="coin-seller">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="sellerTitle">Become a Coin Seller</h2>
+            <p data-i18n="sellerText">Coin seller level is upgraded based on exchange plus recharge coin amount from the past 30 days, excluding today.</p>
+          </div>
+          <span class="badge" data-i18n="sellerBadge">Max 1 USD = 10,000 coins</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="thSellerLevel">Seller Level</th>
+                <th data-i18n="thUpgrade">Upgrade Requirement</th>
+                <th data-i18n="thExchange">Exchange</th>
+                <th data-i18n="thRecharge">Recharge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>D</td>
+                <td>/</td>
+                <td>10,000 diamonds -> 10,000 coins</td>
+                <td>$1 = 9,500 coins</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>10,000,000</td>
+                <td>10,000 diamonds -> 10,000 coins</td>
+                <td>$1 = 9,600 coins</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td>30,000,000</td>
+                <td>10,000 diamonds -> 10,000 coins</td>
+                <td>$1 = 9,700 coins</td>
+              </tr>
+              <tr>
+                <td>A</td>
+                <td>80,000,000</td>
+                <td>10,000 diamonds -> 10,000 coins</td>
+                <td>$1 = 9,800 coins</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td>150,000,000</td>
+                <td>10,000 diamonds -> 10,000 coins</td>
+                <td>$1 = 9,900 coins</td>
+              </tr>
+              <tr>
+                <td class="level-s">SS</td>
+                <td>300,000,000</td>
+                <td>10,000 diamonds -> 10,000 coins</td>
+                <td>$1 = 10,000 coins</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="two-col" style="margin-top: 18px;">
+          <div class="policy-card">
+            <h3 data-i18n="sellerNotesTitle">Coin Seller Notes</h3>
+            <ul>
+              <li data-i18n="sellerNote1">The highest coin seller price is 1 USD = 10,000 coins.</li>
+              <li data-i18n="sellerNote2">In-app purchases provide 1 USD = 7,300 coins.</li>
+              <li data-i18n="sellerNote3">Sellers can trade directly with users and receive diamonds from trading users as gifts.</li>
+            </ul>
+          </div>
+          <div class="notice">
+            <p data-i18n="sellerNotice">Diamonds can be exchanged for coins in the Trade Account. Every 10,000 diamonds can be exchanged for 10,000 coins.</p>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer" data-i18n="footer">Prepared as an HTML policy interface based on the source Google Doc content. Please confirm final legal and operational wording before publishing.</p>
+    </main>
+  </div>
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "BoloUp Agency Policy",
+        asideLabel: "Policy navigation",
+        languageAria: "Select language",
+        brandTitle: "BoloUp Agency",
+        brandSubtitle: "Guild Policy Center",
+        languageLabel: "Language",
+        navOverview: "Overview",
+        navAgency: "Agency Commission",
+        navExample: "Income Example",
+        navBasic: "Basic Commission",
+        navSub: "Sub Agency",
+        navRewards: "Extra Rewards",
+        navSeller: "Coin Seller",
+        sideNote: "Commission level is calculated from host gift diamonds earned in the past 30 days, excluding today.",
+        heroEyebrow: "Official Agency Policy",
+        heroTitle: "BoloUp Guild Growth & Commission Policy",
+        heroText: "Earn agency commission, gift sharing commission, activity rewards, room profit sharing, and coin seller benefits through a clear level-based system.",
+        summaryLabel: "Policy highlights",
+        metric1Label: "Max Agency Rate",
+        metric1Text: "Based on valid host earnings over the past 30 days.",
+        metric2Label: "Gift Share Bonus",
+        metric2Text: "Extra sharing commission for normal gifts.",
+        metric3Label: "Max Agent Income",
+        metric3Text: "Total earning rate can be higher than many comparable apps.",
+        metric4Label: "Weekly Rewards",
+        metric4Text: "Official weekly rewards continue to grow as agencies join.",
+        agencyTitle: "Agency Commission",
+        agencyText: "BoloUp offers agency commission of up to 20%, plus an extra 15% gift sharing commission for agents.",
+        agencyBadge: "Up to 20% + 15%",
+        thLevel: "Level",
+        thDiamonds: "Earning in Past 30 Days - Diamonds",
+        thUsd: "Earning in Past 30 Days - USD",
+        thRate: "Commission Rate",
+        exampleTitle: "Income Example",
+        exampleText: "When today's agency commission is 20%, a host gift worth 100k coins creates three separate income components.",
+        exampleBadge: "100k coins = $10",
+        calcTitle: "Example Calculation",
+        calcLi1: "Host receives 65% of diamonds: 65k diamonds, worth $6.50.",
+        calcLi2: "Agent receives 15% gift sharing: 15k diamonds, worth $1.50.",
+        calcLi3: "Agency commission is calculated as 100k x 65% x 20% = 13k diamonds, worth $1.30.",
+        calcLi4: "Total agent income is $1.50 + $1.30 = $2.80.",
+        calcHost: "Host Income",
+        calcGift: "Gift Share",
+        calcAgency: "Agency Commission",
+        partyTitle: "Normal Gift Share in Party Room",
+        partyText1: "Party room agents receive an extra 15% normal gift sharing commission. Because the normal gift share rate is 65%, the chat room agency's normal gift share can reach 80%.",
+        partyText2: "For a $10 host gift, the host receives $6.50 and the agent shares $1.50 in diamonds. If $10 is sent directly to the agent, the agent receives $8.00 in diamonds.",
+        thApp: "App",
+        thGiftValue: "Gift Value",
+        thHostIncome: "Host Income",
+        thAgentGift: "Agent Gift Income",
+        thAgentCommission: "Agent Commission",
+        thTotalAgent: "Total Agent Income",
+        thTotalShare: "Total Gift Share",
+        basicTitle: "Basic Commission From Hosts",
+        basicText: "Basic commission is calculated from host basic income and the agency commission rate.",
+        formulaTitle: "Core Formulas",
+        formulaLi1: "Basic Commission = Host Basic Income x Commission Rate",
+        formulaLi2: "Host Basic Income = Host Gift Income + Host Call Income",
+        formulaLi3: "Today's commission rate is determined by host earnings from the past 30 days.",
+        validIncome: "Valid income includes all host basic income and all agency self income. Host basic income counts hosts who belong to you and hosts under all invited agents in your agency link.",
+        subTitle: "Commission From Invited Agencies",
+        subText: "Sub-agency commission is calculated from the difference between your commission rate and the sub-agency's commission rate.",
+        subFormula: "Sub Agency Commission = Sub Agency Host Basic Income x (Your Commission Rate - Sub Agency Commission Rate)",
+        thAgency: "Agency",
+        thValidIncome: "Valid Income",
+        thCommissionExample: "Commission Example",
+        subRowA: "Self commission: 50M x 16% = 8M",
+        subRowB: "Sub-agency commission to A: 30M x (16% - 12%) = 1.2M",
+        subRowC: "Sub-agency commission depends on rate difference.",
+        totalA: "Total A",
+        rewardsTitle: "Agent Extra Rewards",
+        rewardsText: "Agents can earn additional rewards through level upgrades, user invitations, room campaigns, game rebates, weekly stars, and host invitations.",
+        rewardsBadge: "Activity Rewards",
+        activity1Title: "Agency Level Activity",
+        activity1Text: "Earn up to $270 in upgrade rewards and up to $1,000 in weekly leaderboard rewards.",
+        activity2Title: "Invite New Users",
+        activity2Text: "Earn points when invited users recharge and bet on games. Weekly bonus can reach $5,500.",
+        activity3Title: "Room Profit Sharing",
+        activity3Text: "Higher game betting volume in your room can unlock rewards up to 0.75%, with no upper limit.",
+        activity4Title: "Game Loss Rebate",
+        activity4Text: "BoloUp can cover part of game losses, returning up to $3,000 per week.",
+        activity5Title: "Weekly Star",
+        activity5Text: "Light up the Weekly Star Gift for weekly rewards up to 4,900,000 diamonds, valued at $490.",
+        activity6Title: "Host Invite Reward",
+        activity6Text: "Invite each host for a chance to spin and win up to $16.",
+        sellerTitle: "Become a Coin Seller",
+        sellerText: "Coin seller level is upgraded based on exchange plus recharge coin amount from the past 30 days, excluding today.",
+        sellerBadge: "Max 1 USD = 10,000 coins",
+        thSellerLevel: "Seller Level",
+        thUpgrade: "Upgrade Requirement",
+        thExchange: "Exchange",
+        thRecharge: "Recharge",
+        sellerNotesTitle: "Coin Seller Notes",
+        sellerNote1: "The highest coin seller price is 1 USD = 10,000 coins.",
+        sellerNote2: "In-app purchases provide 1 USD = 7,300 coins.",
+        sellerNote3: "Sellers can trade directly with users and receive diamonds from trading users as gifts.",
+        sellerNotice: "Diamonds can be exchanged for coins in the Trade Account. Every 10,000 diamonds can be exchanged for 10,000 coins.",
+        footer: "Prepared as an HTML policy interface based on the source Google Doc content. Please confirm final legal and operational wording before publishing."
+      },
+      id: {
+        pageTitle: "Kebijakan Agensi BoloUp",
+        asideLabel: "Navigasi kebijakan",
+        languageAria: "Pilih bahasa",
+        brandTitle: "Agensi BoloUp",
+        brandSubtitle: "Pusat Kebijakan Guild",
+        languageLabel: "Bahasa",
+        navOverview: "Ringkasan",
+        navAgency: "Komisi Agensi",
+        navExample: "Contoh Penghasilan",
+        navBasic: "Komisi Dasar",
+        navSub: "Sub Agensi",
+        navRewards: "Reward Tambahan",
+        navSeller: "Penjual Koin",
+        sideNote: "Level komisi dihitung dari diamond hadiah host selama 30 hari terakhir, tidak termasuk hari ini.",
+        heroEyebrow: "Kebijakan Resmi Agensi",
+        heroTitle: "Kebijakan Pertumbuhan Guild & Komisi BoloUp",
+        heroText: "Dapatkan komisi agensi, komisi bagi hasil hadiah, reward aktivitas, bagi hasil room, dan manfaat penjual koin melalui sistem level yang jelas.",
+        summaryLabel: "Sorotan kebijakan",
+        metric1Label: "Rate Agensi Maks",
+        metric1Text: "Berdasarkan pendapatan valid host selama 30 hari terakhir.",
+        metric2Label: "Bonus Bagi Hasil Hadiah",
+        metric2Text: "Komisi sharing tambahan untuk hadiah normal.",
+        metric3Label: "Penghasilan Agen Maks",
+        metric3Text: "Persentase total penghasilan dapat lebih tinggi dari banyak aplikasi sejenis.",
+        metric4Label: "Reward Mingguan",
+        metric4Text: "Reward resmi mingguan terus bertambah seiring bergabungnya agensi.",
+        agencyTitle: "Komisi Agensi",
+        agencyText: "BoloUp menawarkan komisi agensi hingga 20%, ditambah 15% komisi bagi hasil hadiah ekstra untuk agen.",
+        agencyBadge: "Hingga 20% + 15%",
+        thLevel: "Level",
+        thDiamonds: "Pendapatan 30 Hari Terakhir - Diamond",
+        thUsd: "Pendapatan 30 Hari Terakhir - USD",
+        thRate: "Rate Komisi",
+        exampleTitle: "Contoh Penghasilan",
+        exampleText: "Saat komisi agensi hari ini 20%, hadiah host senilai 100k koin menghasilkan tiga komponen penghasilan.",
+        exampleBadge: "100k koin = $10",
+        calcTitle: "Contoh Perhitungan",
+        calcLi1: "Host menerima 65% diamond: 65k diamond senilai $6.50.",
+        calcLi2: "Agen menerima 15% bagi hasil hadiah: 15k diamond senilai $1.50.",
+        calcLi3: "Komisi agensi dihitung sebagai 100k x 65% x 20% = 13k diamond senilai $1.30.",
+        calcLi4: "Total penghasilan agen adalah $1.50 + $1.30 = $2.80.",
+        calcHost: "Penghasilan Host",
+        calcGift: "Bagi Hasil Hadiah",
+        calcAgency: "Komisi Agensi",
+        partyTitle: "Bagi Hasil Hadiah Normal di Party Room",
+        partyText1: "Agen party room menerima tambahan 15% komisi bagi hasil hadiah normal. Karena rate normal adalah 65%, bagi hasil hadiah normal agensi chat room dapat mencapai 80%.",
+        partyText2: "Untuk hadiah host $10, host menerima $6.50 dan agen berbagi $1.50 dalam bentuk diamond. Jika $10 dikirim langsung ke agen, agen menerima $8.00 dalam diamond.",
+        thApp: "Aplikasi",
+        thGiftValue: "Nilai Hadiah",
+        thHostIncome: "Penghasilan Host",
+        thAgentGift: "Penghasilan Agen dari Hadiah",
+        thAgentCommission: "Komisi Agen",
+        thTotalAgent: "Total Penghasilan Agen",
+        thTotalShare: "Total Bagi Hasil Hadiah",
+        basicTitle: "Komisi Dasar dari Host",
+        basicText: "Komisi dasar dihitung dari pendapatan dasar host dan rate komisi agensi.",
+        formulaTitle: "Formula Utama",
+        formulaLi1: "Komisi Dasar = Pendapatan Dasar Host x Rate Komisi",
+        formulaLi2: "Pendapatan Dasar Host = Pendapatan Hadiah Host + Pendapatan Call Host",
+        formulaLi3: "Rate komisi hari ini ditentukan oleh pendapatan host selama 30 hari terakhir.",
+        validIncome: "Pendapatan valid mencakup semua pendapatan dasar host dan semua pendapatan agensi sendiri. Pendapatan dasar host menghitung host milik Anda serta host di bawah semua agen yang Anda undang dalam link agensi Anda.",
+        subTitle: "Komisi dari Agensi yang Diundang",
+        subText: "Komisi sub agensi dihitung dari selisih antara rate komisi Anda dan rate komisi sub agensi.",
+        subFormula: "Komisi Sub Agensi = Pendapatan Dasar Host Sub Agensi x (Rate Komisi Anda - Rate Komisi Sub Agensi)",
+        thAgency: "Agensi",
+        thValidIncome: "Pendapatan Valid",
+        thCommissionExample: "Contoh Komisi",
+        subRowA: "Komisi sendiri: 50M x 16% = 8M",
+        subRowB: "Komisi sub agensi ke A: 30M x (16% - 12%) = 1.2M",
+        subRowC: "Komisi sub agensi bergantung pada selisih rate.",
+        totalA: "Total A",
+        rewardsTitle: "Reward Tambahan Agen",
+        rewardsText: "Agen dapat memperoleh reward tambahan melalui kenaikan level, undangan pengguna, campaign room, rebate kekalahan game, weekly star, dan undangan host.",
+        rewardsBadge: "Reward Aktivitas",
+        activity1Title: "Aktivitas Level Agensi",
+        activity1Text: "Dapatkan reward upgrade hingga $270 dan reward leaderboard mingguan hingga $1,000.",
+        activity2Title: "Undang Pengguna Baru",
+        activity2Text: "Dapatkan poin saat pengguna yang diundang melakukan recharge dan betting game. Bonus mingguan dapat mencapai $5,500.",
+        activity3Title: "Bagi Hasil Room",
+        activity3Text: "Volume betting game yang lebih tinggi di room Anda dapat membuka reward hingga 0.75%, tanpa batas maksimum.",
+        activity4Title: "Rebate Kekalahan Game",
+        activity4Text: "BoloUp dapat menanggung sebagian kekalahan game dan mengembalikan hingga $3,000 per minggu.",
+        activity5Title: "Weekly Star",
+        activity5Text: "Nyalakan Weekly Star Gift untuk reward mingguan hingga 4,900,000 diamond, senilai $490.",
+        activity6Title: "Reward Undang Host",
+        activity6Text: "Undang setiap host untuk kesempatan spin dan menang hingga $16.",
+        sellerTitle: "Menjadi Penjual Koin",
+        sellerText: "Level penjual koin ditingkatkan berdasarkan jumlah koin exchange plus recharge selama 30 hari terakhir, tidak termasuk hari ini.",
+        sellerBadge: "Maks 1 USD = 10,000 koin",
+        thSellerLevel: "Level Penjual",
+        thUpgrade: "Syarat Upgrade",
+        thExchange: "Exchange",
+        thRecharge: "Recharge",
+        sellerNotesTitle: "Catatan Penjual Koin",
+        sellerNote1: "Harga tertinggi penjual koin adalah 1 USD = 10,000 koin.",
+        sellerNote2: "Pembelian dalam aplikasi memberikan 1 USD = 7,300 koin.",
+        sellerNote3: "Penjual dapat berdagang langsung dengan pengguna dan menerima diamond dari pengguna transaksi dalam bentuk hadiah.",
+        sellerNotice: "Diamond dapat ditukar menjadi koin di Trade Account. Setiap 10,000 diamond dapat ditukar menjadi 10,000 koin.",
+        footer: "Disiapkan sebagai antarmuka kebijakan HTML berdasarkan konten Google Doc sumber. Harap konfirmasi wording legal dan operasional final sebelum dipublikasikan."
+      },
+      ar: {
+        pageTitle: "سياسة وكالة BoloUp",
+        asideLabel: "تنقل السياسة",
+        languageAria: "اختر اللغة",
+        brandTitle: "وكالة BoloUp",
+        brandSubtitle: "مركز سياسات النقابات",
+        languageLabel: "اللغة",
+        navOverview: "نظرة عامة",
+        navAgency: "عمولة الوكالة",
+        navExample: "مثال الدخل",
+        navBasic: "العمولة الأساسية",
+        navSub: "الوكالة الفرعية",
+        navRewards: "مكافآت إضافية",
+        navSeller: "بائع العملات",
+        sideNote: "يتم احتساب مستوى العمولة بناء على ألماس الهدايا الذي حققه المضيفون خلال آخر 30 يوما، باستثناء اليوم.",
+        heroEyebrow: "سياسة الوكالة الرسمية",
+        heroTitle: "سياسة نمو النقابات والعمولات في BoloUp",
+        heroText: "احصل على عمولة الوكالة، وعمولة مشاركة الهدايا، ومكافآت الأنشطة، ومشاركة أرباح الغرف، ومزايا بائع العملات من خلال نظام مستويات واضح.",
+        summaryLabel: "أبرز نقاط السياسة",
+        metric1Label: "أعلى معدل وكالة",
+        metric1Text: "يعتمد على الأرباح الصالحة للمضيفين خلال آخر 30 يوما.",
+        metric2Label: "مكافأة مشاركة الهدايا",
+        metric2Text: "عمولة مشاركة إضافية للهدايا العادية.",
+        metric3Label: "أعلى دخل للوكيل",
+        metric3Text: "يمكن أن تكون نسبة الدخل الإجمالي أعلى من العديد من التطبيقات المشابهة.",
+        metric4Label: "مكافآت أسبوعية",
+        metric4Text: "تستمر المكافآت الرسمية الأسبوعية في النمو مع انضمام المزيد من الوكالات.",
+        agencyTitle: "عمولة الوكالة",
+        agencyText: "تقدم BoloUp عمولة وكالة تصل إلى 20%، بالإضافة إلى 15% عمولة مشاركة هدايا إضافية للوكلاء.",
+        agencyBadge: "حتى 20% + 15%",
+        thLevel: "المستوى",
+        thDiamonds: "الأرباح في آخر 30 يوما - ألماس",
+        thUsd: "الأرباح في آخر 30 يوما - دولار",
+        thRate: "معدل العمولة",
+        exampleTitle: "مثال الدخل",
+        exampleText: "عندما تكون عمولة الوكالة اليوم 20%، فإن هدية مضيف بقيمة 100k عملة تنشئ ثلاثة مكونات دخل منفصلة.",
+        exampleBadge: "100k عملة = $10",
+        calcTitle: "مثال حسابي",
+        calcLi1: "يحصل المضيف على 65% من الألماس: 65k ألماس بقيمة $6.50.",
+        calcLi2: "يحصل الوكيل على 15% من مشاركة الهدايا: 15k ألماس بقيمة $1.50.",
+        calcLi3: "تحسب عمولة الوكالة كالتالي: 100k x 65% x 20% = 13k ألماس بقيمة $1.30.",
+        calcLi4: "إجمالي دخل الوكيل هو $1.50 + $1.30 = $2.80.",
+        calcHost: "دخل المضيف",
+        calcGift: "مشاركة الهدايا",
+        calcAgency: "عمولة الوكالة",
+        partyTitle: "مشاركة الهدايا العادية في غرفة الحفلات",
+        partyText1: "يحصل وكلاء غرف الحفلات على 15% إضافية من عمولة مشاركة الهدايا العادية. وبما أن معدل المشاركة العادي هو 65%، يمكن أن تصل مشاركة الهدايا العادية لوكالة غرفة الدردشة إلى 80%.",
+        partyText2: "لهدية مضيف بقيمة $10، يحصل المضيف على $6.50 ويشارك الوكيل $1.50 على شكل ألماس. إذا تم إرسال $10 مباشرة إلى الوكيل، يحصل الوكيل على $8.00 على شكل ألماس.",
+        thApp: "التطبيق",
+        thGiftValue: "قيمة الهدية",
+        thHostIncome: "دخل المضيف",
+        thAgentGift: "دخل الوكيل من الهدايا",
+        thAgentCommission: "عمولة الوكيل",
+        thTotalAgent: "إجمالي دخل الوكيل",
+        thTotalShare: "إجمالي مشاركة الهدايا",
+        basicTitle: "العمولة الأساسية من المضيفين",
+        basicText: "تحسب العمولة الأساسية من الدخل الأساسي للمضيف ومعدل عمولة الوكالة.",
+        formulaTitle: "الصيغ الأساسية",
+        formulaLi1: "العمولة الأساسية = الدخل الأساسي للمضيف x معدل العمولة",
+        formulaLi2: "الدخل الأساسي للمضيف = دخل هدايا المضيف + دخل مكالمات المضيف",
+        formulaLi3: "يتم تحديد معدل عمولة اليوم بناء على أرباح المضيفين خلال آخر 30 يوما.",
+        validIncome: "يشمل الدخل الصالح كل الدخل الأساسي للمضيفين وكل دخل الوكالة الذاتي. ويحتسب الدخل الأساسي للمضيفين المضيفين التابعين لك والمضيفين تحت جميع الوكلاء المدعوين في رابط وكالتك.",
+        subTitle: "العمولة من الوكالات المدعوة",
+        subText: "تحسب عمولة الوكالة الفرعية من الفرق بين معدل عمولتك ومعدل عمولة الوكالة الفرعية.",
+        subFormula: "عمولة الوكالة الفرعية = الدخل الأساسي لمضيفي الوكالة الفرعية x (معدل عمولتك - معدل عمولة الوكالة الفرعية)",
+        thAgency: "الوكالة",
+        thValidIncome: "الدخل الصالح",
+        thCommissionExample: "مثال العمولة",
+        subRowA: "العمولة الذاتية: 50M x 16% = 8M",
+        subRowB: "عمولة الوكالة الفرعية إلى A: 30M x (16% - 12%) = 1.2M",
+        subRowC: "تعتمد عمولة الوكالة الفرعية على فرق المعدل.",
+        totalA: "إجمالي A",
+        rewardsTitle: "مكافآت الوكيل الإضافية",
+        rewardsText: "يمكن للوكلاء كسب مكافآت إضافية من خلال ترقية المستوى، ودعوة المستخدمين، وحملات الغرف، واسترداد خسائر الألعاب، ونجوم الأسبوع، ودعوات المضيفين.",
+        rewardsBadge: "مكافآت الأنشطة",
+        activity1Title: "نشاط مستوى الوكالة",
+        activity1Text: "اكسب حتى $270 من مكافآت الترقية وحتى $1,000 من مكافآت لوحة الصدارة الأسبوعية.",
+        activity2Title: "دعوة مستخدمين جدد",
+        activity2Text: "اكسب نقاطا عندما يقوم المستخدمون المدعوون بالشحن والمراهنة في الألعاب. قد تصل المكافأة الأسبوعية إلى $5,500.",
+        activity3Title: "مشاركة أرباح الغرفة",
+        activity3Text: "كلما ارتفع حجم مراهنات الألعاب في غرفتك، يمكن فتح مكافآت تصل إلى 0.75% دون حد أعلى.",
+        activity4Title: "استرداد خسائر الألعاب",
+        activity4Text: "يمكن أن تغطي BoloUp جزءا من خسائر الألعاب وتعيد حتى $3,000 أسبوعيا.",
+        activity5Title: "نجم الأسبوع",
+        activity5Text: "قم بإضاءة هدية نجم الأسبوع للحصول على مكافآت أسبوعية تصل إلى 4,900,000 ألماس بقيمة $490.",
+        activity6Title: "مكافأة دعوة المضيف",
+        activity6Text: "ادع كل مضيف لتحصل على فرصة تدوير وربح حتى $16.",
+        sellerTitle: "كن بائع عملات",
+        sellerText: "تتم ترقية مستوى بائع العملات بناء على مبلغ عملات التبديل بالإضافة إلى الشحن خلال آخر 30 يوما، باستثناء اليوم.",
+        sellerBadge: "الحد الأقصى 1 USD = 10,000 عملة",
+        thSellerLevel: "مستوى البائع",
+        thUpgrade: "متطلبات الترقية",
+        thExchange: "التبديل",
+        thRecharge: "الشحن",
+        sellerNotesTitle: "ملاحظات بائع العملات",
+        sellerNote1: "أعلى سعر لبائع العملات هو 1 USD = 10,000 عملة.",
+        sellerNote2: "تمنح عمليات الشراء داخل التطبيق 1 USD = 7,300 عملة.",
+        sellerNote3: "يمكن للبائعين التداول مباشرة مع المستخدمين واستلام الألماس من مستخدمي التداول على شكل هدايا.",
+        sellerNotice: "يمكن تبديل الألماس إلى عملات في حساب التداول. كل 10,000 ألماس يمكن تبديلها إلى 10,000 عملة.",
+        footer: "تم إعداد هذه الصفحة كواجهة HTML للسياسة بناء على محتوى Google Doc المصدر. يرجى تأكيد الصياغة القانونية والتشغيلية النهائية قبل النشر."
+      }
+    };
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    function applyLanguage(language) {
+      const dictionary = translations[language] || translations.en;
+      document.documentElement.lang = language;
+      document.body.dir = language === "ar" ? "rtl" : "ltr";
+      document.title = dictionary.pageTitle;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+        if (dictionary[key]) {
+          element.textContent = dictionary[key];
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+        element.dataset.i18nAttr.split(",").forEach((pair) => {
+          const [attribute, key] = pair.split(":").map((part) => part.trim());
+          if (attribute && key && dictionary[key]) {
+            element.setAttribute(attribute, dictionary[key]);
+          }
+        });
+      });
+
+      localStorage.setItem("boloup-policy-language", language);
+    }
+
+    languageSelect.addEventListener("change", (event) => {
+      applyLanguage(event.target.value);
+    });
+
+    const savedLanguage = localStorage.getItem("boloup-policy-language") || "en";
+    languageSelect.value = translations[savedLanguage] ? savedLanguage : "en";
+    applyLanguage(languageSelect.value);
+  </script>
+</body>
+</html>
