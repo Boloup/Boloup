@@ -1,35 +1,1371 @@
 <!doctype html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BoloUp Pro Policy Center</title>
   <style>
-    :root{color-scheme:light;--ink:#20142b;--muted:#70657a;--line:#eaddec;--soft:#fff7fb;--soft2:#f8f2ff;--brand:#e80074;--brand2:#9a11ef;--brand3:#ff4f9a;--deep:#301047;--shadow:0 24px 60px rgba(96,24,91,.14);--page:min(1160px,calc(100vw - 40px));--radius:8px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:radial-gradient(circle at top left,rgba(154,17,239,.13),transparent 340px),linear-gradient(180deg,#fff7fc 0,#fff 48%,#fff8fb 100%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.55}body[dir=rtl]{font-family:Tahoma,Arial,sans-serif}a,button,select{font:inherit}button,select{border:0}button{cursor:pointer}.topbar{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(234,221,236,.82);background:rgba(255,250,253,.9);backdrop-filter:blur(18px)}.topbar-inner{width:var(--page);min-height:74px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:inline-flex;align-items:center;gap:12px;min-width:0}.logo{display:block;flex:0 0 auto;border-radius:12px;box-shadow:0 12px 30px rgba(232,0,116,.22)}.brand .logo{width:44px;height:44px}.brand-title{display:block;color:var(--deep);font-size:16px;font-weight:850;white-space:nowrap}.brand-subtitle{display:block;color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}.pill-link,.language-select{min-height:42px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:0 14px;color:var(--deep);background:#fff;box-shadow:0 10px 30px rgba(76,28,76,.07);font-size:13px;font-weight:820;text-decoration:none;white-space:nowrap}.language-select{padding:8px 10px}.language-select span{color:var(--muted);font-weight:750}.language-select select{color:var(--deep);background:transparent;font-weight:760;outline:none;cursor:pointer}.download{color:#fff;background:linear-gradient(135deg,var(--brand2),var(--brand))}.hero{width:var(--page);min-height:410px;margin:34px auto 0;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.95fr);gap:clamp(24px,5vw,58px);align-items:center;padding:clamp(28px,5vw,56px);border:1px solid rgba(234,221,236,.78);border-radius:var(--radius);background:linear-gradient(135deg,rgba(154,17,239,.11),rgba(232,0,116,.09) 46%,rgba(255,255,255,.94) 47%),#fff;box-shadow:var(--shadow);overflow:hidden}.hero h1{max-width:720px;margin:0;color:var(--deep);font-size:clamp(40px,6vw,74px);line-height:.97;letter-spacing:0}.hero p{max-width:660px;margin:22px 0 0;color:#5e5068;font-size:clamp(16px,2vw,20px)}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.primary-action{min-height:46px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0 18px;color:#fff;background:linear-gradient(135deg,var(--brand2),var(--brand));box-shadow:0 16px 30px rgba(232,0,116,.22);font-weight:820;text-decoration:none}.hero-logo-wrap{position:relative;min-height:280px;display:grid;place-items:center}.hero-logo-wrap:before{content:'';position:absolute;width:min(330px,80%);aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,rgba(154,17,239,.18),rgba(255,79,154,.24));filter:blur(2px)}.hero-logo{position:relative;width:min(220px,60vw);height:auto;border-radius:46px;box-shadow:0 26px 80px rgba(232,0,116,.28)}.layout{width:var(--page);margin:24px auto 72px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:start}.sidebar{position:sticky;top:98px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.92);box-shadow:0 12px 38px rgba(76,28,76,.07);padding:16px}.sidebar h2{margin:0 0 10px;color:var(--deep);font-size:16px}.nav{display:grid;gap:8px}.nav button{width:100%;min-height:52px;display:grid;grid-template-columns:38px minmax(0,1fr);gap:10px;align-items:center;padding:8px;border-radius:var(--radius);color:var(--ink);background:transparent;text-align:start}.nav button:hover,.nav button.is-active{background:linear-gradient(135deg,rgba(154,17,239,.11),rgba(232,0,116,.1))}.nav b{width:38px;height:38px;display:grid;place-items:center;border-radius:8px;color:#fff;background:linear-gradient(135deg,var(--brand2),var(--brand3));font-size:12px}.nav span span{display:block;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.content{display:grid;gap:18px;min-width:0}.overview,.card{padding:clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.94);box-shadow:0 14px 42px rgba(76,28,76,.07)}.kicker{margin:0 0 8px;color:var(--brand);font-size:13px;font-weight:850;text-transform:uppercase}.overview h2{margin:0;color:var(--deep);font-size:clamp(28px,4vw,44px)}.overview p{max-width:820px;margin:12px 0 0;color:#62556c;font-size:17px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tabs button{min-height:38px;border-radius:999px;padding:0 13px;color:var(--deep);background:var(--soft2);font-weight:780}.tabs button.is-active{color:#fff;background:linear-gradient(135deg,var(--brand2),var(--brand))}.card h3{margin:0;color:var(--deep);font-size:clamp(22px,3vw,32px);line-height:1.12}.badge{display:inline-flex;align-items:center;width:max-content;max-width:100%;min-height:32px;border-radius:999px;margin:10px 0 16px;padding:5px 11px;color:var(--brand);background:rgba(232,0,116,.09);font-size:13px;font-weight:820}.body{display:grid;gap:12px;color:#43364d;font-size:16px}.body p{margin:0}.table-wrap{margin-top:18px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:#fff}.policy-table{width:100%;min-width:600px;border-collapse:collapse}.policy-table th,.policy-table td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:start;vertical-align:middle;font-size:14px}.policy-table th{color:var(--deep);background:var(--soft2);font-weight:850}.policy-table tr:last-child td{border-bottom:0}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}.meta span{min-height:32px;display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;color:#685b72;background:var(--soft);font-size:13px;font-weight:740}.calc{display:grid;gap:12px;margin-top:18px;padding:16px;border:1px solid rgba(232,0,116,.16);border-radius:var(--radius);background:linear-gradient(135deg,rgba(154,17,239,.08),rgba(232,0,116,.07))}.calc input{width:100%;min-height:48px;border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;color:var(--deep);background:#fff;font:inherit;font-size:18px;font-weight:820}.calc-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.calc-results div{min-height:80px;display:grid;align-content:center;gap:4px;padding:12px;border:1px solid rgba(234,221,236,.8);border-radius:var(--radius);background:rgba(255,255,255,.84)}.calc-results span{color:var(--muted);font-size:12px;font-weight:800}.calc-results strong{color:var(--deep);font-size:clamp(22px,3vw,30px);line-height:1}@media (max-width:900px){:root{--page:min(100vw - 28px,760px)}.topbar-inner{min-height:auto;padding:12px 0;align-items:flex-start;flex-direction:column}.top-actions{width:100%;display:grid;grid-template-columns:1fr}.language-select,.pill-link{width:100%;justify-content:center;border-radius:var(--radius)}.hero{min-height:0;grid-template-columns:1fr;margin-top:18px;padding:24px}.hero h1{font-size:42px}.hero-logo-wrap{min-height:180px}.hero-logo{width:150px;border-radius:32px}.layout{grid-template-columns:1fr;margin-top:16px}.sidebar{position:static}.nav{grid-template-columns:repeat(2,minmax(0,1fr))}.calc-results{grid-template-columns:1fr}}@media (max-width:520px){:root{--page:calc(100vw - 22px)}.brand .logo{width:40px;height:40px}.brand-title{white-space:normal;font-size:15px}.hero{padding:20px}.hero h1{font-size:34px}.hero p{font-size:15px}.nav{grid-template-columns:1fr}.overview,.card{padding:18px}.overview h2{font-size:28px}.card h3{font-size:24px}}
+    :root {
+      color-scheme: light;
+      --ink: #20142b;
+      --muted: #70657a;
+      --line: #eaddec;
+      --surface: #ffffff;
+      --soft: #fff7fb;
+      --soft-2: #f8f2ff;
+      --brand: #e80074;
+      --brand-2: #9a11ef;
+      --brand-3: #ff4f9a;
+      --deep: #301047;
+      --shadow: 0 24px 60px rgba(96, 24, 91, .14);
+      --radius: 8px;
+      --page: min(1160px, calc(100vw - 40px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(154, 17, 239, .13), transparent 340px),
+        linear-gradient(180deg, #fff7fc 0, #ffffff 48%, #fff8fb 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    body[dir="rtl"] {
+      font-family: Tahoma, Arial, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    a,
+    button,
+    select {
+      font: inherit;
+    }
+
+    button,
+    select {
+      border: 0;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .site-shell {
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(234, 221, 236, .82);
+      background: rgba(255, 250, 253, .88);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      width: var(--page);
+      min-height: 74px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(232, 0, 116, .22);
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-title {
+      display: block;
+      font-size: 16px;
+      font-weight: 850;
+      color: var(--deep);
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .language-select {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(76, 28, 76, .07);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .tutorial-link {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 14px;
+      color: var(--deep);
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(76, 28, 76, .07);
+      font-size: 13px;
+      font-weight: 820;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .tutorial-link svg {
+      width: 17px;
+      height: 17px;
+      color: var(--brand);
+    }
+
+    .language-select span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .language-select select {
+      color: var(--deep);
+      background: transparent;
+      font-weight: 760;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .download-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .download-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .download-link {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 14px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--brand-2), var(--brand));
+      box-shadow: 0 10px 30px rgba(232, 0, 116, .16);
+      font-size: 13px;
+      font-weight: 850;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .download-link span:first-child {
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .hero {
+      width: var(--page);
+      min-height: 430px;
+      margin: 34px auto 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+      gap: clamp(24px, 5vw, 58px);
+      align-items: center;
+      padding: clamp(28px, 5vw, 56px);
+      border: 1px solid rgba(234, 221, 236, .78);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(154, 17, 239, .11), rgba(232, 0, 116, .09) 46%, rgba(255, 255, 255, .94) 47%),
+        #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      margin: 0;
+      color: var(--deep);
+      font-size: clamp(40px, 6vw, 74px);
+      line-height: .97;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: #5e5068;
+      font-size: clamp(16px, 2vw, 20px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .primary-action,
+    .secondary-action {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0 18px;
+      text-decoration: none;
+      font-weight: 820;
+    }
+
+    .primary-action {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--brand-2), var(--brand));
+      box-shadow: 0 16px 30px rgba(232, 0, 116, .22);
+    }
+
+    .secondary-action {
+      color: var(--deep);
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .logo-stage {
+      position: relative;
+      min-height: 300px;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-stage::before {
+      content: "";
+      position: absolute;
+      width: min(330px, 80%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(154, 17, 239, .18), rgba(255, 79, 154, .24));
+      filter: blur(2px);
+    }
+
+    .hero-logo {
+      position: relative;
+      width: min(220px, 60vw);
+      border-radius: 46px;
+      box-shadow: 0 26px 80px rgba(232, 0, 116, .28);
+    }
+
+    .main-grid {
+      width: var(--page);
+      margin: 24px auto 72px;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 98px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 12px 38px rgba(76, 28, 76, .07);
+    }
+
+    .quick-card {
+      padding: 16px;
+    }
+
+    .quick-card h2 {
+      margin: 0 0 10px;
+      color: var(--deep);
+      font-size: 16px;
+    }
+
+    .category-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .category-button {
+      width: 100%;
+      min-height: 52px;
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      padding: 8px;
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: transparent;
+      text-align: start;
+    }
+
+    .category-button:hover,
+    .category-button.is-active {
+      background: linear-gradient(135deg, rgba(154, 17, 239, .11), rgba(232, 0, 116, .1));
+    }
+
+    .category-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--brand-2), var(--brand-3));
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .category-name {
+      display: block;
+      color: var(--deep);
+      font-weight: 840;
+    }
+
+    .category-note {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .maintenance {
+      padding: 16px;
+      color: #5d5068;
+      font-size: 14px;
+    }
+
+    .maintenance strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--deep);
+    }
+
+    .content {
+      min-width: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .category-overview {
+      padding: clamp(20px, 3vw, 28px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: 0 16px 44px rgba(76, 28, 76, .08);
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .category-overview h2 {
+      margin: 0;
+      color: var(--deep);
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: 0;
+    }
+
+    .category-overview p {
+      max-width: 820px;
+      margin: 12px 0 0;
+      color: #62556c;
+      font-size: 17px;
+    }
+
+    .section-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .section-tabs button {
+      min-height: 38px;
+      border-radius: 999px;
+      padding: 0 13px;
+      color: var(--deep);
+      background: var(--soft-2);
+      font-weight: 780;
+    }
+
+    .section-tabs button.is-active {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--brand-2), var(--brand));
+    }
+
+    .policy-card {
+      padding: clamp(20px, 3vw, 30px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 14px 42px rgba(76, 28, 76, .07);
+    }
+
+    .policy-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .policy-card h3 {
+      margin: 0;
+      color: var(--deep);
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.12;
+    }
+
+    .policy-badge {
+      flex: 0 0 auto;
+      max-width: 260px;
+      min-height: 32px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 11px;
+      color: var(--brand);
+      background: rgba(232, 0, 116, .09);
+      font-size: 13px;
+      font-weight: 820;
+      text-align: center;
+    }
+
+    .policy-body {
+      display: grid;
+      gap: 12px;
+      color: #43364d;
+      font-size: 16px;
+    }
+
+    .policy-body p {
+      margin: 0;
+    }
+
+    .policy-tables {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .policy-table-block {
+      min-width: 0;
+    }
+
+    .policy-table-block h4 {
+      margin: 0 0 8px;
+      color: var(--deep);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .policy-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    .policy-table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+    }
+
+    .policy-table th,
+    .policy-table td {
+      padding: 12px 13px;
+      border-bottom: 1px solid var(--line);
+      text-align: start;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+
+    .policy-table th {
+      color: var(--deep);
+      background: var(--soft-2);
+      font-weight: 850;
+    }
+
+    .policy-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .policy-table td:first-child {
+      color: var(--deep);
+      font-weight: 820;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .activity-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    .activity-copy {
+      padding: 14px;
+    }
+
+    .activity-copy h4 {
+      margin: 0;
+      color: var(--deep);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .activity-copy p {
+      margin: 8px 0 0;
+      color: #5f5269;
+      font-size: 14px;
+    }
+
+    .calculator {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid rgba(232, 0, 116, .16);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(154, 17, 239, .08), rgba(232, 0, 116, .07));
+    }
+
+    .calculator-input {
+      display: grid;
+      gap: 8px;
+    }
+
+    .calculator-input label {
+      color: var(--deep);
+      font-size: 14px;
+      font-weight: 840;
+    }
+
+    .calculator-input input {
+      width: 100%;
+      min-height: 48px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      color: var(--deep);
+      background: #ffffff;
+      font: inherit;
+      font-size: 18px;
+      font-weight: 820;
+      outline: none;
+    }
+
+    .calculator-input input:focus {
+      border-color: rgba(232, 0, 116, .55);
+      box-shadow: 0 0 0 3px rgba(232, 0, 116, .12);
+    }
+
+    .calculator-results {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .calc-result {
+      min-height: 88px;
+      display: grid;
+      align-content: center;
+      gap: 4px;
+      padding: 12px;
+      border: 1px solid rgba(234, 221, 236, .8);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .84);
+    }
+
+    .calc-result span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .calc-result strong {
+      color: var(--deep);
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1;
+    }
+
+    .calc-result.is-max {
+      border-color: rgba(232, 0, 116, .24);
+      background: #ffffff;
+    }
+
+    .calc-result.is-max strong {
+      color: var(--brand);
+    }
+
+    .calculator-note {
+      margin: 0;
+      color: #5f5269;
+      font-size: 13px;
+    }
+
+    .policy-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .meta-pill {
+      min-height: 32px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 10px;
+      color: #685b72;
+      background: var(--soft);
+      font-size: 13px;
+      font-weight: 740;
+    }
+
+    .mobile-category-strip {
+      display: none;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --page: min(100vw - 28px, 760px);
+      }
+
+      .topbar-inner {
+        min-height: auto;
+        padding: 12px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .brand-title {
+        white-space: normal;
+      }
+
+      .language-select {
+        width: 100%;
+        justify-content: space-between;
+        border-radius: var(--radius);
+      }
+
+      .top-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .tutorial-link {
+        min-height: 40px;
+        justify-content: center;
+        border-radius: var(--radius);
+      }
+
+      .download-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .download-label {
+        grid-column: 1 / -1;
+        text-align: center;
+      }
+
+      .download-link {
+        min-height: 40px;
+        border-radius: var(--radius);
+      }
+
+      .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 18px;
+        padding: 24px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .logo-stage {
+        min-height: 180px;
+      }
+
+      .hero-logo {
+        width: 150px;
+        border-radius: 32px;
+      }
+
+      .main-grid {
+        grid-template-columns: 1fr;
+        margin-top: 16px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .sidebar .quick-card {
+        display: none;
+      }
+
+      .mobile-category-strip {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 2px 0 10px;
+        scrollbar-width: thin;
+      }
+
+      .mobile-category-strip button {
+        min-width: max-content;
+        min-height: 42px;
+        border-radius: 999px;
+        padding: 0 14px;
+        color: var(--deep);
+        background: #ffffff;
+        border: 1px solid var(--line);
+        font-weight: 820;
+      }
+
+      .mobile-category-strip button.is-active {
+        color: #ffffff;
+        border-color: transparent;
+        background: linear-gradient(135deg, var(--brand-2), var(--brand));
+      }
+
+      .maintenance {
+        font-size: 13px;
+      }
+
+      .policy-header {
+        display: grid;
+      }
+
+      .policy-badge {
+        width: fit-content;
+        max-width: 100%;
+      }
+
+      .activity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .calculator-results {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      :root {
+        --page: calc(100vw - 22px);
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-title {
+        font-size: 15px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .primary-action,
+      .secondary-action {
+        width: 100%;
+      }
+
+      .category-overview,
+      .policy-card {
+        padding: 18px;
+      }
+
+      .category-overview h2 {
+        font-size: 28px;
+      }
+
+      .policy-card h3 {
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body>
-  <svg width='0' height='0' style='position:absolute' aria-hidden='true' focusable='false'>
-    <defs>
-      <linearGradient id='logoGradient' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#b800ff'/><stop offset='.48' stop-color='#e000b8'/><stop offset='1' stop-color='#ff0065'/></linearGradient>
-      <radialGradient id='logoGlow' cx='.35' cy='.34' r='.35'><stop offset='0' stop-color='#fff' stop-opacity='.38'/><stop offset='1' stop-color='#fff' stop-opacity='0'/></radialGradient>
-      <symbol id='boloupLogo' viewBox='0 0 500 500'>
-        <rect width='500' height='500' rx='125' fill='url(#logoGradient)'/>
-        <rect width='500' height='500' rx='125' fill='url(#logoGlow)'/>
-        <path d='M250 62C276 144 352 147 352 249C352 352 276 355 250 438C224 355 148 352 148 249C148 147 224 144 250 62Z' fill='#ffd7f0' opacity='.82'/>
-        <path d='M250 62C235 144 148 166 148 249C148 292 168 321 193 347C219 283 244 226 250 62Z' fill='#d77ada' opacity='.55'/>
-        <path d='M250 62C265 144 352 166 352 249C352 292 332 321 307 347C281 283 256 226 250 62Z' fill='#ff99d2' opacity='.5'/>
-        <path d='M250 235C259 250 268 255 284 258C268 262 259 270 250 286C241 270 232 262 216 258C232 255 241 250 250 235Z' fill='#d90086'/>
-      </symbol>
-    </defs>
-  </svg>
-  <header class='topbar'><div class='topbar-inner'><div class='brand' aria-label='BoloUp Pro Policy Center'><svg class='logo' viewBox='0 0 500 500' role='img' aria-label='BoloUp logo'><use href='#boloupLogo'></use></svg><span><span class='brand-title'>BoloUp Pro Policy Center</span><span class='brand-subtitle' data-copy='subtitle'>Official policy hub for partners and creators</span></span></div><div class='top-actions'><a class='pill-link' href='https://www.youtube.com/@BoloUp_Global' target='_blank' rel='noopener noreferrer' data-copy='tutorials'>Tutorials</a><a class='pill-link download' href='https://play.google.com/store/apps/details?id=com.boloup.pro&hl=zh' target='_blank' rel='noopener noreferrer'>Google Play</a><a class='pill-link download' href='https://apps.apple.com/us/app/boloup-live-chat/id6717590134' target='_blank' rel='noopener noreferrer'>App Store</a><label class='language-select'><span data-copy='language'>Language</span><select id='languageSelect'></select></label></div></div></header>
-  <section class='hero'><div><h1 data-copy='heroTitle'>BoloUp Pro Policy Center</h1><p data-copy='heroText'>A clear public policy center for agencies, hosts, coinsellers, and BD teams. Start with the role you belong to, then review the latest available policy.</p><div class='hero-actions'><a class='primary-action' href='#policies' data-copy='browse'>Browse Policies</a></div></div><div class='hero-logo-wrap' aria-hidden='true'><svg class='logo hero-logo' viewBox='0 0 500 500'><use href='#boloupLogo'></use></svg></div></section>
-  <main id='policies' class='layout'><aside class='sidebar'><h2 data-copy='categories'>Categories</h2><div id='categoryList' class='nav'></div></aside><section class='content'><article class='overview'><p class='kicker' data-copy='current'>Current Category</p><h2 id='categoryTitle'></h2><p id='categorySummary'></p><div id='tabs' class='tabs'></div></article><div id='cards'></div></section></main>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand" aria-label="BoloUp Pro Policy Center">
+          <img class="brand-logo" src="assets/boloup-logo.png" alt="BoloUp logo">
+          <span class="brand-copy">
+            <span class="brand-title">BoloUp Pro Policy Center</span>
+            <span class="brand-subtitle" data-i18n="subtitle">Official policy hub for partners and creators</span>
+          </span>
+        </div>
+
+        <div class="top-actions">
+          <a class="tutorial-link" href="https://www.youtube.com/@BoloUp_Global" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:tutorials">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M22 12s0-3.3-.42-4.9a3.02 3.02 0 0 0-2.13-2.13C17.85 4.55 12 4.55 12 4.55s-5.85 0-7.45.42A3.02 3.02 0 0 0 2.42 7.1C2 8.7 2 12 2 12s0 3.3.42 4.9a3.02 3.02 0 0 0 2.13 2.13c1.6.42 7.45.42 7.45.42s5.85 0 7.45-.42a3.02 3.02 0 0 0 2.13-2.13C22 15.3 22 12 22 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="m10 15.1 5.2-3.1L10 8.9v6.2Z" fill="currentColor"/>
+            </svg>
+            <span data-i18n="tutorials">Tutorials</span>
+          </a>
+
+          <div id="downloadOptions" class="download-links" aria-label="Download BoloUp">
+            <span class="download-label" data-i18n="downloadApp">Download App</span>
+            <a class="download-link" href="https://play.google.com/store/apps/details?id=com.boloup.pro&hl=zh" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">▶</span>
+              <span data-i18n="googlePlay">Google Play</span>
+            </a>
+            <a class="download-link" href="https://apps.apple.com/us/app/boloup-live-chat/id6717590134" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true"></span>
+              <span data-i18n="appStore">App Store</span>
+            </a>
+          </div>
+
+          <label class="language-select">
+            <span data-i18n="language">Language</span>
+            <select id="languageSelect" aria-label="Language"></select>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="pageTitle">
+      <div>
+        <h1 id="pageTitle" data-i18n="heroTitle">BoloUp Pro Policy Center</h1>
+        <p data-i18n="heroText">A clear public policy center for agencies, hosts, coinsellers, and BD teams. Start with the role you belong to, then review the latest available policy.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#policies" data-i18n="browsePolicies">Browse Policies</a>
+        </div>
+      </div>
+      <div class="logo-stage" aria-hidden="true">
+        <img class="hero-logo" src="assets/boloup-logo.png" alt="">
+      </div>
+    </section>
+
+    <main id="policies" class="main-grid">
+      <aside class="sidebar">
+        <div class="panel quick-card">
+          <h2 data-i18n="categories">Categories</h2>
+          <div id="categoryList" class="category-list"></div>
+        </div>
+
+      </aside>
+
+      <section class="content">
+        <div id="mobileCategoryStrip" class="mobile-category-strip" aria-label="Policy categories"></div>
+
+        <article class="category-overview">
+          <p class="kicker" data-i18n="currentCategory">Current Category</p>
+          <h2 id="categoryTitle"></h2>
+          <p id="categorySummary"></p>
+          <div id="sectionTabs" class="section-tabs"></div>
+        </article>
+
+        <div id="policyCards"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/policies.js"></script>
   <script>
-    const i18n={en:{subtitle:'Official policy hub for partners and creators',language:'Language',heroTitle:'BoloUp Pro Policy Center',heroText:'A clear public policy center for agencies, hosts, coinsellers, and BD teams. Start with the role you belong to, then review the latest available policy.',browse:'Browse Policies',categories:'Categories',current:'Current Category',tutorials:'Tutorials',version:'Version',updated:'Updated'},id:{subtitle:'Pusat kebijakan resmi untuk partner dan kreator',language:'Bahasa',heroTitle:'BoloUp Pro Policy Center',heroText:'Pusat kebijakan publik untuk agency, host, coinseller, dan tim BD.',browse:'Lihat Kebijakan',categories:'Kategori',current:'Kategori Saat Ini',tutorials:'Tutorial',version:'Versi',updated:'Diperbarui'},ar:{subtitle:'مركز السياسات الرسمي للشركاء والمبدعين',language:'اللغة',heroTitle:'BoloUp Pro Policy Center',heroText:'مركز سياسات عام للوكالات والمضيفين وبائعي العملات وفرق تطوير الأعمال.',browse:'تصفح السياسات',categories:'الفئات',current:'الفئة الحالية',tutorials:'الشروحات',version:'الإصدار',updated:'آخر تحديث'},ne:{subtitle:'पार्टनर र क्रिएटरका लागि आधिकारिक नीति केन्द्र',language:'भाषा',heroTitle:'BoloUp Pro Policy Center',heroText:'एजेन्सी, होस्ट, क्वाइनसेलर र BD टोलीका लागि सार्वजनिक नीति केन्द्र।',browse:'नीति हेर्नुहोस्',categories:'वर्गहरू',current:'हालको वर्ग',tutorials:'ट्युटोरियल',version:'संस्करण',updated:'अपडेट'},hi:{subtitle:'पार्टनर्स और क्रिएटर्स के लिए आधिकारिक नीति केंद्र',language:'भाषा',heroTitle:'BoloUp Pro Policy Center',heroText:'Agencies, hosts, coinsellers और BD teams के लिए public policy center.',browse:'Policies देखें',categories:'Categories',current:'Current Category',tutorials:'Tutorials',version:'Version',updated:'Updated'},es:{subtitle:'Centro oficial de políticas para partners y creadores',language:'Idioma',heroTitle:'BoloUp Pro Policy Center',heroText:'Centro público de políticas para agencias, hosts, coinsellers y equipos BD.',browse:'Ver políticas',categories:'Categorías',current:'Categoría actual',tutorials:'Tutoriales',version:'Versión',updated:'Actualizado'}};
-    const data={languages:[['en','English','ltr'],['id','Bahasa Indonesia','ltr'],['ar','العربية','rtl'],['ne','नेपाली','ltr'],['hi','हिन्दी','ltr'],['es','Español','ltr']],categories:[{id:'agency',icon:'AG',title:{en:'Agency',ar:'الوكالة',ne:'एजेन्सी'},summary:{en:'Commission, max share explanation, sub-agency income, extra rewards, and settlement logic for agencies.',id:'Komisi, max share, income sub-agency, reward tambahan, dan settlement untuk agency.',ar:'العمولة والحد الأقصى للحصة ودخل الوكالات الفرعية والمكافآت.',ne:'एजेन्सी कमिसन, max share, sub-agency income र rewards।'},sections:['agency-overview','agency-calculator','agency-commission','agency-subagency','agency-extra']},{id:'host',icon:'HO',title:{en:'Host',ar:'المضيف',ne:'होस्ट'},summary:{en:'General host benefits and salary rules, including Talent Host and Star Host policies.',id:'Benefit host umum dan aturan salary, termasuk Talent Host dan Star Host.',ar:'مزايا المضيف وقواعد الراتب بما في ذلك Talent Host و Star Host.',ne:'Host benefits र salary rules, Talent Host / Star Host सहित।'},sections:['host-general','host-talent','host-star']},{id:'coinseller',icon:'CS',title:{en:'Coinseller',ar:'بائع العملات',ne:'क्वाइनसेलर'},summary:{en:'Coin seller price rules, exchange rules, recharge rates, and level upgrade requirements.',id:'Aturan harga coinseller, exchange, recharge rate, dan upgrade level.',ar:'قواعد السعر والتبديل والشحن ومتطلبات الترقية.',ne:'Coinseller price, exchange, recharge र level upgrade rules।'},sections:['coinseller-overview','coinseller-levels']},{id:'bd',icon:'BD',title:{en:'BD',ar:'تطوير الأعمال',ne:'BD'},summary:{en:'BD salary policy for effective agency invitations, new agency income, old agency income, and payout notes.',id:'BD salary untuk effective agency, income agency baru/lama, dan payout notes.',ar:'سياسة راتب BD للوكالات الفعالة ودخل الوكالات وملاحظات الدفع.',ne:'BD salary policy, agency invitations, income र payout notes।'},sections:['bd-overview','bd-new','bd-old','bd-notes']}],sections:{'agency-overview':{title:{en:'Agency Policy Overview',id:'Ringkasan Kebijakan Agency',ar:'نظرة عامة على سياسة الوكالة',ne:'एजेन्सी नीति परिचय'},badge:{en:'Max combined share 93%'},body:{en:['BoloUp offers agency commission up to 20%, plus an extra 15% gift reward for normal gifts.','At the maximum rate, host + agency combined share can reach 93%: host share 65%, agency gift reward 15%, and agency commission 13%.','Agency commission is calculated from host income, not directly from total gift coins. Agency max income can reach 28%.']},meta:['Source 2026-05-29','2026-05-29']},'agency-calculator':{title:{en:'Agency Revenue Calculator',id:'Kalkulator Income Agency',ar:'حاسبة دخل الوكالة',ne:'एजेन्सी आम्दानी क्यालकुलेटर'},badge:{en:'Max 93%'},calculator:true,body:{en:['Estimate the maximum diamond distribution when a host receives gift coins. Default rates: host 65%, agency gift reward 15%, agency commission 20% of host income.']},meta:['Max rate model','2026-05-29']},'agency-commission':{title:{en:'Commission Rules',id:'Aturan Komisi',ar:'قواعد العمولة',ne:'कमिसन नियम'},badge:{en:'Up to 20% + 15%'},body:{en:['Today agency commission rate is determined by gift diamonds earned by all hosts in the last 30 days, excluding today.','Basic commission = host basic income x commission rate. Valid income includes host basic income and agency self income.']},table:{headers:['Level','Past 30 days diamonds','Past 30 days USD','Commission rate'],rows:[['D','0 - 1,999,999','0 - 199','4%'],['C','2,000,000 - 9,999,999','200 - 999','8%'],['B','10,000,000 - 49,999,999','1,000 - 4,999','12%'],['A','50,000,000 - 149,999,999','5,000 - 14,999','16%'],['S','150,000,000+','15,000+','20%']]},meta:['Source 2026-05-29','2026-05-29']},'agency-subagency':{title:{en:'Sub-agency Commission',id:'Komisi Sub-agency',ar:'عمولة الوكالة الفرعية',ne:'Sub-agency commission'},badge:{en:'Rate difference'},body:{en:['Commission from an invited agency is calculated by the difference between your commission rate and the invited agency commission rate.','Formula: sub-agency commission = sub-agency host basic income x (your commission rate - sub-agency commission rate).']},meta:['Source 2026-05-29','2026-05-29']},'agency-extra':{title:{en:'Agency Extra Rewards',id:'Reward Tambahan Agency',ar:'مكافآت الوكالة الإضافية',ne:'एजेन्सी अतिरिक्त पुरस्कार'},badge:{en:'Activity rewards'},body:{en:['Agency level activity rewards, invite-new-users activity, daily room game profits, room reward pool, and official activity support are available based on task completion and source policy rules.']},meta:['Source 2026-05-29','2026-05-29']},'host-general':{title:{en:'General Host Policy',id:'Kebijakan Host Umum',ar:'سياسة المضيف العامة',ne:'सामान्य होस्ट नीति'},badge:{en:'Base host rules'},body:{en:['General host benefits and base salary rules apply before special Talent Host or Star Host policies. Host income and qualification depend on monthly task completion, room behavior, and platform rules.']},meta:['Source 2026-05-29','2026-05-29']},'host-talent':{title:{en:'Talent Host Policy',id:'Kebijakan Talent Host',ar:'سياسة Talent Host',ne:'Talent Host नीति'},badge:{en:'Special host track'},body:{en:['Talent Host policy covers qualification, live duration, gift income requirements, salary levels, and cancellation conditions. Fraud or rule violations may terminate salary qualification.']},meta:['Source 2026-05-29','2026-05-29']},'host-star':{title:{en:'Star Host Policy',id:'Kebijakan Star Host',ar:'سياسة Star Host',ne:'Star Host नीति'},badge:{en:'Weekly task refresh'},body:{en:['Star Host policy includes appearance, camera, lighting, music, room interaction, live duration, weekly tasks, payment rules, and warning/cancellation standards.']},meta:['Source 2026-05-29','2026-05-29']},'coinseller-overview':{title:{en:'Coinseller Overview',id:'Ringkasan Coinseller',ar:'نظرة عامة على بائع العملات',ne:'क्वाइनसेलर परिचय'},badge:{en:'Max 1 USD = 10,000 coins'},body:{en:['The highest coin seller price is 1 USD = 10,000 coins. In-app purchase reference rate is 1 USD = 7,300 coins.','Coin sellers may trade directly with users and receive diamonds from trading users in the form of gifts.']},meta:['Source 2026-05-29','2026-05-29']},'coinseller-levels':{title:{en:'Coinseller Levels',id:'Level Coinseller',ar:'مستويات بائع العملات',ne:'क्वाइनसेलर स्तर'},badge:{en:'Past 30 days'},body:{en:['Upgrade requirement is based on Exchange + Recharge coins amount in the past 30 days, excluding today. All levels exchange 10,000 diamonds to 10,000 coins.']},table:{headers:['Seller level','Upgrade require','Exchange','Recharge'],rows:[['D','-','10,000 diamonds -> 10,000 coins','1 USD = 9,500 coins'],['C','10,000,000','10,000 diamonds -> 10,000 coins','1 USD = 9,600 coins'],['B','30,000,000','10,000 diamonds -> 10,000 coins','1 USD = 9,700 coins'],['A','80,000,000','10,000 diamonds -> 10,000 coins','1 USD = 9,800 coins'],['S','150,000,000','10,000 diamonds -> 10,000 coins','1 USD = 9,900 coins'],['SS','300,000,000','10,000 diamonds -> 10,000 coins','1 USD = 10,000 coins']]},meta:['Source 2026-05-29','2026-05-29']},'bd-overview':{title:{en:'BD Salary Policy Overview',id:'Ringkasan BD Salary Policy',ar:'نظرة عامة على راتب تطوير الأعمال',ne:'BD तलब नीति परिचय'},badge:{en:'Feb. 2026'},body:{en:['BD salary is built from basic invite salary, new agency income bonus, and old agency income bonus.','An effective agency must have at least 10 registered hosts and at least 300,000 diamonds monthly income.']},meta:['Feb. 2026 source','2026-05-29']},'bd-new':{title:{en:'New Agency Income Bonus',id:'Bonus Income Agency Baru',ar:'مكافأة دخل الوكالة الجديدة',ne:'नयाँ एजेन्सी आम्दानी बोनस'},badge:{en:'First 3 months'},body:{en:['An agency is new during its first three months. Each new agency is checked separately by monthly income. First-month and later-month bonus tiers are based on qualified agency income.']},meta:['Feb. 2026 source','2026-05-29']},'bd-old':{title:{en:'Old Agency Income Bonus',id:'Bonus Income Agency Lama',ar:'مكافأة دخل الوكالة القديمة',ne:'पुरानो एजेन्सी आम्दानी बोनस'},badge:{en:'Combined pool'},body:{en:['After the first three months, an agency enters the old-agency pool. Old agency income is combined across old agencies, then matched to one bonus tier.']},meta:['Feb. 2026 source','2026-05-29']},'bd-notes':{title:{en:'Important BD Notes',id:'Catatan Penting BD',ar:'ملاحظات مهمة لتطوير الأعمال',ne:'महत्वपूर्ण BD नोटहरू'},badge:{en:'Payout rules'},body:{en:['No bonus is paid for malicious activity. Salary is usually paid in diamonds on the 1st of each month. BD status may be revoked if performance falls below policy requirements.']},meta:['Feb. 2026 source','2026-05-29']}}};
-    let lang='en',cat=data.categories[0].id,section=data.categories[0].sections[0];const text=v=>!v?'':typeof v==='string'?v:(v[lang]||v.en||'');const copy=k=>i18n[lang][k]||i18n.en[k]||'';function esc(v){return String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;')}function renderCopy(){document.querySelectorAll('[data-copy]').forEach(n=>n.textContent=copy(n.dataset.copy));document.documentElement.lang=lang;document.body.dir=(data.languages.find(l=>l[0]===lang)||[])[2]||'ltr'}function renderLang(){languageSelect.innerHTML=data.languages.map(l=>`<option value='${l[0]}'>${l[1]}</option>`).join('');languageSelect.value=lang}function renderNav(){categoryList.innerHTML=data.categories.map(c=>`<button class='${c.id===cat?'is-active':''}' data-cat='${c.id}'><b>${c.icon}</b><span><strong>${text(c.title)}</strong><span>${text(c.summary)}</span></span></button>`).join('');document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{cat=b.dataset.cat;section=data.categories.find(c=>c.id===cat).sections[0];render()})}function renderOverview(){const c=data.categories.find(x=>x.id===cat);categoryTitle.textContent=text(c.title);categorySummary.textContent=text(c.summary);tabs.innerHTML=c.sections.map(id=>`<button class='${id===section?'is-active':''}' data-section='${id}'>${text(data.sections[id].title)}</button>`).join('');document.querySelectorAll('[data-section]').forEach(b=>b.onclick=()=>{section=b.dataset.section;render()})}function calcMarkup(){return `<div class='calc'><label>Host gift coins</label><input id='giftCoins' type='number' min='0' step='1000' value='10000'><div class='calc-results'><div><span>Host income · 65%</span><strong data-host>6,500</strong></div><div><span>Agency gift · 15%</span><strong data-gift>1,500</strong></div><div><span>Agency commission · 13%</span><strong data-commission>1,300</strong></div><div><span>Max total share · 93%</span><strong data-total>9,300</strong></div></div></div>`}function wireCalc(){const input=document.getElementById('giftCoins');if(!input)return;const run=()=>{const v=Math.max(Number(input.value)||0,0),host=v*.65,gift=v*.15,commission=host*.2,total=host+gift+commission;document.querySelector('[data-host]').textContent=Math.round(host).toLocaleString('en-US');document.querySelector('[data-gift]').textContent=Math.round(gift).toLocaleString('en-US');document.querySelector('[data-commission]').textContent=Math.round(commission).toLocaleString('en-US');document.querySelector('[data-total]').textContent=Math.round(total).toLocaleString('en-US')};input.oninput=run;run()}function tableMarkup(t){if(!t)return'';return `<div class='table-wrap'><table class='policy-table'><thead><tr>${t.headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}function renderCards(){const s=data.sections[section];cards.innerHTML=`<article class='card'><h3>${text(s.title)}</h3><span class='badge'>${text(s.badge)}</span><div class='body'>${(s.body[lang]||s.body.en||[]).map(p=>`<p>${esc(p)}</p>`).join('')}</div>${s.calculator?calcMarkup():''}${tableMarkup(s.table)}<div class='meta'><span>${copy('version')}: ${s.meta[0]}</span><span>${copy('updated')}: ${s.meta[1]}</span></div></article>`;wireCalc()}function render(){renderCopy();renderLang();renderNav();renderOverview();renderCards()}languageSelect.onchange=e=>{lang=e.target.value;render()};render();
+    const data = window.BOLOUP_POLICY_DATA;
+    const copy = {
+      en: {
+        subtitle: "Official policy hub for partners and creators",
+        language: "Language",
+        heroTitle: "BoloUp Pro Policy Center",
+        heroText: "A clear public policy center for agencies, hosts, coinsellers, and BD teams. Start with the role you belong to, then review the latest available policy.",
+        browsePolicies: "Browse Policies",
+        maintenanceGuide: "Maintenance Guide",
+        categories: "Categories",
+        currentCategory: "Current Category",
+        tutorials: "Tutorials",
+        downloadApp: "Download App",
+        googlePlay: "Google Play",
+        appStore: "App Store",
+        giftCoins: "Host gift coins",
+        hostIncome: "Host income",
+        agencyGift: "Agency gift reward",
+        agencyCommission: "Agency commission",
+        agencyTotal: "Agency total",
+        maxTotal: "Max total share",
+        calculatorNote: "Agency commission is calculated from host income: gift coins x 65% x 20%. Max combined host + agency share is 93%.",
+        version: "Version",
+        updated: "Updated"
+      },
+      id: {
+        subtitle: "Pusat kebijakan resmi untuk partner dan kreator",
+        language: "Bahasa",
+        heroTitle: "BoloUp Pro Policy Center",
+        heroText: "Pusat kebijakan publik yang jelas untuk agency, host, coinseller, dan tim BD. Mulai dari peran Anda, lalu lihat kebijakan terbaru yang tersedia.",
+        browsePolicies: "Lihat Kebijakan",
+        maintenanceGuide: "Panduan Maintenance",
+        categories: "Kategori",
+        currentCategory: "Kategori Saat Ini",
+        tutorials: "Tutorial",
+        downloadApp: "Download App",
+        googlePlay: "Google Play",
+        appStore: "App Store",
+        giftCoins: "Gift coin host",
+        hostIncome: "Income host",
+        agencyGift: "Reward gift agency",
+        agencyCommission: "Komisi agency",
+        agencyTotal: "Total agency",
+        maxTotal: "Max total share",
+        calculatorNote: "Komisi agency dihitung dari income host: gift coins x 65% x 20%. Max combined share host + agency adalah 93%.",
+        version: "Versi",
+        updated: "Diperbarui"
+      },
+      ar: {
+        subtitle: "مركز السياسات الرسمي للشركاء والمبدعين",
+        language: "اللغة",
+        heroTitle: "BoloUp Pro Policy Center",
+        heroText: "مركز سياسات عام وواضح للوكالات والمضيفين وبائعي العملات وفرق تطوير الأعمال. ابدأ بالدور المناسب لك ثم راجع أحدث سياسة متاحة.",
+        browsePolicies: "تصفح السياسات",
+        maintenanceGuide: "دليل الصيانة",
+        categories: "الفئات",
+        currentCategory: "الفئة الحالية",
+        tutorials: "الشروحات",
+        downloadApp: "تحميل التطبيق",
+        googlePlay: "Google Play",
+        appStore: "App Store",
+        giftCoins: "عملات هدايا المضيف",
+        hostIncome: "دخل المضيف",
+        agencyGift: "مكافأة هدايا الوكالة",
+        agencyCommission: "عمولة الوكالة",
+        agencyTotal: "إجمالي الوكالة",
+        maxTotal: "الحد الأقصى للحصة",
+        calculatorNote: "يتم احتساب عمولة الوكالة من دخل المضيف: عملات الهدية × 65% × 20%. الحد الأقصى المشترك للمضيف + الوكالة هو 93%.",
+        version: "الإصدار",
+        updated: "آخر تحديث"
+      },
+      ne: {
+        subtitle: "पार्टनर र क्रिएटरका लागि आधिकारिक नीति केन्द्र",
+        language: "भाषा",
+        heroTitle: "BoloUp Pro Policy Center",
+        heroText: "एजेन्सी, होस्ट, क्वाइनसेलर र BD टोलीका लागि स्पष्ट सार्वजनिक नीति केन्द्र। आफ्नो भूमिका चयन गरेर उपलब्ध नयाँ नीति हेर्नुहोस्।",
+        browsePolicies: "नीति हेर्नुहोस्",
+        maintenanceGuide: "मर्मत गाइड",
+        categories: "वर्गहरू",
+        currentCategory: "हालको वर्ग",
+        tutorials: "ट्युटोरियल",
+        downloadApp: "App डाउनलोड",
+        googlePlay: "Google Play",
+        appStore: "App Store",
+        giftCoins: "Host gift coins",
+        hostIncome: "Host income",
+        agencyGift: "Agency gift reward",
+        agencyCommission: "Agency commission",
+        agencyTotal: "Agency total",
+        maxTotal: "Max total share",
+        calculatorNote: "Agency commission host income बाट calculate हुन्छ: gift coins x 65% x 20%। Max combined host + agency share 93% हो।",
+        version: "संस्करण",
+        updated: "अपडेट"
+      },
+      hi: {
+        subtitle: "पार्टनर्स और क्रिएटर्स के लिए आधिकारिक नीति केंद्र",
+        language: "भाषा",
+        heroTitle: "BoloUp Pro Policy Center",
+        heroText: "Agencies, hosts, coinsellers और BD teams के लिए एक स्पष्ट public policy center. अपनी भूमिका से शुरू करें और उपलब्ध नवीनतम policy देखें.",
+        browsePolicies: "Policies देखें",
+        categories: "Categories",
+        currentCategory: "Current Category",
+        tutorials: "Tutorials",
+        downloadApp: "App डाउनलोड करें",
+        googlePlay: "Google Play",
+        appStore: "App Store",
+        giftCoins: "Host gift coins",
+        hostIncome: "Host income",
+        agencyGift: "Agency gift reward",
+        agencyCommission: "Agency commission",
+        agencyTotal: "Agency total",
+        maxTotal: "Max total share",
+        calculatorNote: "Agency commission host income से calculate होता है: gift coins x 65% x 20%. Max combined host + agency share 93% है.",
+        version: "Version",
+        updated: "Updated"
+      },
+      es: {
+        subtitle: "Centro oficial de políticas para partners y creadores",
+        language: "Idioma",
+        heroTitle: "BoloUp Pro Policy Center",
+        heroText: "Un centro público de políticas para agencias, hosts, coinsellers y equipos BD. Empieza por tu rol y revisa la política disponible más reciente.",
+        browsePolicies: "Ver políticas",
+        categories: "Categorías",
+        currentCategory: "Categoría actual",
+        tutorials: "Tutoriales",
+        downloadApp: "Descargar app",
+        googlePlay: "Google Play",
+        appStore: "App Store",
+        giftCoins: "Monedas de regalo del host",
+        hostIncome: "Ingreso del host",
+        agencyGift: "Recompensa de regalo de agency",
+        agencyCommission: "Comisión de agency",
+        agencyTotal: "Total de agency",
+        maxTotal: "Participación máxima total",
+        calculatorNote: "La comisión de agency se calcula sobre el ingreso del host: monedas de regalo x 65% x 20%. La participación combinada máxima de host + agency es 93%.",
+        version: "Versión",
+        updated: "Actualizado"
+      }
+    };
+
+    let activeLanguage = data.defaultLanguage;
+    let activeCategory = data.categories[0].id;
+    let activeSection = null;
+
+    const languageSelect = document.getElementById("languageSelect");
+    const categoryList = document.getElementById("categoryList");
+    const mobileCategoryStrip = document.getElementById("mobileCategoryStrip");
+    const categoryTitle = document.getElementById("categoryTitle");
+    const categorySummary = document.getElementById("categorySummary");
+    const sectionTabs = document.getElementById("sectionTabs");
+    const policyCards = document.getElementById("policyCards");
+    const downloadOptions = document.getElementById("downloadOptions");
+
+    function text(value) {
+      if (!value) return "";
+      if (typeof value === "string" || typeof value === "number") return String(value);
+      return value[activeLanguage] || value.en || "";
+    }
+
+    function t(key) {
+      return copy[activeLanguage][key] || copy.en[key] || "";
+    }
+
+    function setLanguage(language) {
+      activeLanguage = language;
+      const languageMeta = data.languages.find((item) => item.code === language);
+      document.documentElement.lang = language;
+      document.body.dir = languageMeta ? languageMeta.dir : "ltr";
+      render();
+    }
+
+    function setCategory(categoryId) {
+      activeCategory = categoryId;
+      const category = data.categories.find((item) => item.id === categoryId);
+      activeSection = category.sections[0];
+      render();
+    }
+
+    function setSection(sectionId) {
+      activeSection = sectionId;
+      render();
+    }
+
+    function renderLanguageOptions() {
+      languageSelect.innerHTML = data.languages.map((language) => (
+        `<option value="${language.code}">${language.label}</option>`
+      )).join("");
+      languageSelect.value = activeLanguage;
+    }
+
+    function renderStaticCopy() {
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        node.textContent = t(node.dataset.i18n);
+      });
+      document.querySelectorAll("[data-i18n-attr]").forEach((node) => {
+        node.dataset.i18nAttr.split(",").forEach((pair) => {
+          const [attribute, key] = pair.split(":").map((part) => part.trim());
+          if (attribute && key) {
+            node.setAttribute(attribute, t(key));
+          }
+        });
+      });
+    }
+
+    function categoryButton(category, compact = false) {
+      const active = category.id === activeCategory ? " is-active" : "";
+      if (compact) {
+        return `<button type="button" class="${active.trim()}" data-category="${category.id}">${text(category.title)}</button>`;
+      }
+      return `
+        <button type="button" class="category-button${active}" data-category="${category.id}">
+          <span class="category-icon">${category.icon}</span>
+          <span>
+            <span class="category-name">${text(category.title)}</span>
+            <span class="category-note">${text(category.summary)}</span>
+          </span>
+        </button>
+      `;
+    }
+
+    function renderCategories() {
+      categoryList.innerHTML = data.categories.map((category) => categoryButton(category)).join("");
+      mobileCategoryStrip.innerHTML = data.categories.map((category) => categoryButton(category, true)).join("");
+
+      document.querySelectorAll("[data-category]").forEach((button) => {
+        button.addEventListener("click", () => setCategory(button.dataset.category));
+      });
+    }
+
+    function renderOverview() {
+      const category = data.categories.find((item) => item.id === activeCategory);
+      categoryTitle.textContent = text(category.title);
+      categorySummary.textContent = text(category.summary);
+
+      sectionTabs.innerHTML = category.sections.map((sectionId) => {
+        const section = data.sections[sectionId];
+        const active = sectionId === activeSection ? " is-active" : "";
+        return `<button type="button" class="${active.trim()}" data-section="${sectionId}">${text(section.title)}</button>`;
+      }).join("");
+
+      document.querySelectorAll("[data-section]").forEach((button) => {
+        button.addEventListener("click", () => setSection(button.dataset.section));
+      });
+    }
+
+    function formatNumber(value) {
+      return Math.round(value).toLocaleString("en-US");
+    }
+
+    function calculatorMarkup() {
+      return `
+        <div class="calculator" data-calculator>
+          <div class="calculator-input">
+            <label for="giftCoinsInput">${t("giftCoins")}</label>
+            <input id="giftCoinsInput" data-gift-coins type="number" min="0" step="1000" value="10000" inputmode="numeric">
+          </div>
+          <div class="calculator-results">
+            <div class="calc-result">
+              <span>${t("hostIncome")} · 65%</span>
+              <strong data-host-income>6,500</strong>
+            </div>
+            <div class="calc-result">
+              <span>${t("agencyGift")} · 15%</span>
+              <strong data-agency-gift>1,500</strong>
+            </div>
+            <div class="calc-result">
+              <span>${t("agencyCommission")} · 65% x 20%</span>
+              <strong data-agency-commission>1,300</strong>
+            </div>
+            <div class="calc-result">
+              <span>${t("agencyTotal")} · 28%</span>
+              <strong data-agency-total>2,800</strong>
+            </div>
+            <div class="calc-result is-max">
+              <span>${t("maxTotal")} · 93%</span>
+              <strong data-max-total>9,300</strong>
+            </div>
+          </div>
+          <p class="calculator-note">${t("calculatorNote")}</p>
+        </div>
+      `;
+    }
+
+    function updateCalculator(container) {
+      const input = container.querySelector("[data-gift-coins]");
+      const coins = Math.max(Number(input.value) || 0, 0);
+      const hostIncome = coins * 0.65;
+      const agencyGift = coins * 0.15;
+      const agencyCommission = hostIncome * 0.2;
+      const agencyTotal = agencyGift + agencyCommission;
+      const maxTotal = hostIncome + agencyTotal;
+
+      container.querySelector("[data-host-income]").textContent = formatNumber(hostIncome);
+      container.querySelector("[data-agency-gift]").textContent = formatNumber(agencyGift);
+      container.querySelector("[data-agency-commission]").textContent = formatNumber(agencyCommission);
+      container.querySelector("[data-agency-total]").textContent = formatNumber(agencyTotal);
+      container.querySelector("[data-max-total]").textContent = formatNumber(maxTotal);
+    }
+
+    function wireCalculators() {
+      document.querySelectorAll("[data-calculator]").forEach((container) => {
+        const input = container.querySelector("[data-gift-coins]");
+        updateCalculator(container);
+        input.addEventListener("input", () => updateCalculator(container));
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function tablesMarkup(tables = []) {
+      if (!tables.length) return "";
+
+      return `
+        <div class="policy-tables">
+          ${tables.map((table) => `
+            <div class="policy-table-block">
+              <h4>${escapeHtml(text(table.title))}</h4>
+              <div class="policy-table-wrap">
+                <table class="policy-table">
+                  <thead>
+                    <tr>${table.headers.map((header) => `<th>${escapeHtml(text(header))}</th>`).join("")}</tr>
+                  </thead>
+                  <tbody>
+                    ${table.rows.map((row) => `
+                      <tr>${row.map((cell) => `<td>${escapeHtml(text(cell))}</td>`).join("")}</tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function activitiesMarkup(activities = []) {
+      if (!activities.length) return "";
+
+      return `
+        <div class="activity-grid">
+          ${activities.map((activity) => `
+            <article class="activity-card">
+              <div class="activity-copy">
+                <h4>${escapeHtml(text(activity.title))}</h4>
+                <p>${escapeHtml(text(activity.description))}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderPolicies() {
+      const category = data.categories.find((item) => item.id === activeCategory);
+      const sectionIds = activeSection ? [activeSection] : category.sections;
+
+      policyCards.innerHTML = sectionIds.map((sectionId) => {
+        const section = data.sections[sectionId];
+        const paragraphs = (section.body[activeLanguage] || section.body.en || [])
+          .map((paragraph) => `<p>${paragraph}</p>`)
+          .join("");
+
+        const calculator = section.calculator ? calculatorMarkup() : "";
+        const tables = tablesMarkup(section.tables);
+        const activities = activitiesMarkup(section.activities);
+
+        return `
+          <article class="policy-card">
+            <div class="policy-header">
+              <h3>${text(section.title)}</h3>
+              <span class="policy-badge">${text(section.badge)}</span>
+            </div>
+            <div class="policy-body">${paragraphs}</div>
+            ${calculator}
+            ${tables}
+            ${activities}
+            <div class="policy-meta">
+              <span class="meta-pill">${t("version")}: ${section.meta.version}</span>
+              <span class="meta-pill">${t("updated")}: ${section.meta.updated}</span>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function render() {
+      renderStaticCopy();
+      renderCategories();
+      renderOverview();
+      renderPolicies();
+      wireCalculators();
+      languageSelect.value = activeLanguage;
+    }
+
+    languageSelect.addEventListener("change", (event) => setLanguage(event.target.value));
+
+    window.BoloUpPolicy = {
+      setLanguage,
+      setCategory,
+      setSection
+    };
+
+    renderLanguageOptions();
+    setCategory(activeCategory);
   </script>
 </body>
 </html>
